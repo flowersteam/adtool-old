@@ -386,7 +386,6 @@ class NewExplorer(BaseExplorer):
     }
    ```
     The dict keys are used in GUI to choose your module when you setup an experiment.
-
 # Add a new callback to the libs 
 Six different types of callbacks can be implemented in the `AutomatedDiscoveryTool` libs, namely:
 - on_cancelled_callbacks : called when user decides to cancel the experiment in the frontend
@@ -515,7 +514,7 @@ REGISTRATION = {
 
 <p>```</p>
 
-<p>5) For now the software does not permit to add custom callback via GUI. You may use the libs independently like in <code>libs/test/AutoDiscExperiment.py</code> and add manually your personal callbacks. The other way is to manually add your callback in <code>services/AutodsicServer/flask/experiments/remote_experiments.py</code> on the <code>__init__</code> method to use your own callbacks with the full software package.</p>
+<p>5) For now the software does not permit to add custom callback via GUI. You may use the libs independently like in <code>libs/test/AutoDiscExperiment.py</code> and add manually your personal callbacks. The other way is to manually add your callback in <code>services/AutodiscServer/flask/experiments/remote_experiments.py</code> on the <code>__init__</code> method to use your own callbacks with the full software package.</p>
 
 <h1 id="add-a-new-remote-server">Add a new remote server</h1>
 
