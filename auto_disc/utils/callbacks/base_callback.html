@@ -61,12 +61,12 @@
                         <label class="view-source-button" for="mod-base_callback-view-source"><span>View Source</span></label>
 
                         <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="k">class</span> <span class="nc">BaseCallback</span><span class="p">():</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">    Base class for callbacks used by the experiment pipelines when progress is made (e.g. new dicovery, explorer&#39;s optimization).</span>
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a>
 </span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="sd">            Initialize attributes common to all auto_disc callbacks</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>
 </span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="sd">            #### Args:</span>
@@ -75,7 +75,7 @@
 </span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
 </span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>
 </span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="sd">            The call which happens when callback is raised</span>
 </span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>
 </span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="sd">            #### Args:</span>
@@ -100,12 +100,12 @@
     </div>
     <a class="headerlink" href="#BaseCallback"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseCallback-2"><a href="#BaseCallback-2"><span class="linenos"> 2</span></a><span class="k">class</span> <span class="nc">BaseCallback</span><span class="p">():</span>
-</span><span id="BaseCallback-3"><a href="#BaseCallback-3"><span class="linenos"> 3</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseCallback-3"><a href="#BaseCallback-3"><span class="linenos"> 3</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseCallback-4"><a href="#BaseCallback-4"><span class="linenos"> 4</span></a><span class="sd">    Base class for callbacks used by the experiment pipelines when progress is made (e.g. new dicovery, explorer&#39;s optimization).</span>
 </span><span id="BaseCallback-5"><a href="#BaseCallback-5"><span class="linenos"> 5</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="BaseCallback-6"><a href="#BaseCallback-6"><span class="linenos"> 6</span></a>
 </span><span id="BaseCallback-7"><a href="#BaseCallback-7"><span class="linenos"> 7</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseCallback-8"><a href="#BaseCallback-8"><span class="linenos"> 8</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseCallback-8"><a href="#BaseCallback-8"><span class="linenos"> 8</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseCallback-9"><a href="#BaseCallback-9"><span class="linenos"> 9</span></a><span class="sd">            Initialize attributes common to all auto_disc callbacks</span>
 </span><span id="BaseCallback-10"><a href="#BaseCallback-10"><span class="linenos">10</span></a>
 </span><span id="BaseCallback-11"><a href="#BaseCallback-11"><span class="linenos">11</span></a><span class="sd">            #### Args:</span>
@@ -114,7 +114,7 @@
 </span><span id="BaseCallback-14"><a href="#BaseCallback-14"><span class="linenos">14</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
 </span><span id="BaseCallback-15"><a href="#BaseCallback-15"><span class="linenos">15</span></a>
 </span><span id="BaseCallback-16"><a href="#BaseCallback-16"><span class="linenos">16</span></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseCallback-17"><a href="#BaseCallback-17"><span class="linenos">17</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseCallback-17"><a href="#BaseCallback-17"><span class="linenos">17</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseCallback-18"><a href="#BaseCallback-18"><span class="linenos">18</span></a><span class="sd">            The call which happens when callback is raised</span>
 </span><span id="BaseCallback-19"><a href="#BaseCallback-19"><span class="linenos">19</span></a>
 </span><span id="BaseCallback-20"><a href="#BaseCallback-20"><span class="linenos">20</span></a><span class="sd">            #### Args:</span>
@@ -141,7 +141,7 @@
     </div>
     <a class="headerlink" href="#BaseCallback.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseCallback.__init__-7"><a href="#BaseCallback.__init__-7"><span class="linenos"> 7</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseCallback.__init__-8"><a href="#BaseCallback.__init__-8"><span class="linenos"> 8</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseCallback.__init__-8"><a href="#BaseCallback.__init__-8"><span class="linenos"> 8</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseCallback.__init__-9"><a href="#BaseCallback.__init__-9"><span class="linenos"> 9</span></a><span class="sd">            Initialize attributes common to all auto_disc callbacks</span>
 </span><span id="BaseCallback.__init__-10"><a href="#BaseCallback.__init__-10"><span class="linenos">10</span></a>
 </span><span id="BaseCallback.__init__-11"><a href="#BaseCallback.__init__-11"><span class="linenos">11</span></a><span class="sd">            #### Args:</span>

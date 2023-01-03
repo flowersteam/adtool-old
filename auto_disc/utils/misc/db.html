@@ -90,7 +90,7 @@
 </span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a>
 </span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>    <span class="k">def</span> <span class="nf">to_autodisc_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">documents</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">keys</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">new_keys</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">History</span><span class="p">:</span>
-</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="sd">            Select only some keys in documents and return a History. Use `new_keys` to rename these keys in the returned History.</span>
 </span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a>
 </span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="sd">            Args:</span>
@@ -119,7 +119,7 @@
 </span><span id="L-45"><a href="#L-45"><span class="linenos">45</span></a>        <span class="k">return</span> <span class="n">results</span>
 </span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a>    
 </span><span id="L-47"><a href="#L-47"><span class="linenos">47</span></a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">slice</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a><span class="sd">            Use indexing and slicing over db.</span>
 </span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a>
 </span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a><span class="sd">            Args:</span>
@@ -137,13 +137,13 @@
 </span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a>            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </span><span id="L-64"><a href="#L-64"><span class="linenos">64</span></a>
 </span><span id="L-65"><a href="#L-65"><span class="linenos">65</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DB</span><span class="p">:</span>
-</span><span id="L-66"><a href="#L-66"><span class="linenos">66</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-66"><a href="#L-66"><span class="linenos">66</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-67"><a href="#L-67"><span class="linenos">67</span></a><span class="sd">            Save DB.</span>
 </span><span id="L-68"><a href="#L-68"><span class="linenos">68</span></a><span class="sd">        &#39;&#39;&#39;</span>
 </span><span id="L-69"><a href="#L-69"><span class="linenos">69</span></a>        <span class="k">return</span> <span class="bp">self</span>
 </span><span id="L-70"><a href="#L-70"><span class="linenos">70</span></a>
 </span><span id="L-71"><a href="#L-71"><span class="linenos">71</span></a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saved_dict</span><span class="p">):</span>
-</span><span id="L-72"><a href="#L-72"><span class="linenos">72</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-72"><a href="#L-72"><span class="linenos">72</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-73"><a href="#L-73"><span class="linenos">73</span></a><span class="sd">            Reload DB.</span>
 </span><span id="L-74"><a href="#L-74"><span class="linenos">74</span></a><span class="sd">        &#39;&#39;&#39;</span>
 </span><span id="L-75"><a href="#L-75"><span class="linenos">75</span></a>        <span class="k">pass</span>
@@ -175,7 +175,7 @@
 </span><span id="DB-17"><a href="#DB-17"><span class="linenos">17</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span><span id="DB-18"><a href="#DB-18"><span class="linenos">18</span></a>
 </span><span id="DB-19"><a href="#DB-19"><span class="linenos">19</span></a>    <span class="k">def</span> <span class="nf">to_autodisc_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">documents</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">keys</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">new_keys</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">History</span><span class="p">:</span>
-</span><span id="DB-20"><a href="#DB-20"><span class="linenos">20</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="DB-20"><a href="#DB-20"><span class="linenos">20</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="DB-21"><a href="#DB-21"><span class="linenos">21</span></a><span class="sd">            Select only some keys in documents and return a History. Use `new_keys` to rename these keys in the returned History.</span>
 </span><span id="DB-22"><a href="#DB-22"><span class="linenos">22</span></a>
 </span><span id="DB-23"><a href="#DB-23"><span class="linenos">23</span></a><span class="sd">            Args:</span>
@@ -204,7 +204,7 @@
 </span><span id="DB-46"><a href="#DB-46"><span class="linenos">46</span></a>        <span class="k">return</span> <span class="n">results</span>
 </span><span id="DB-47"><a href="#DB-47"><span class="linenos">47</span></a>    
 </span><span id="DB-48"><a href="#DB-48"><span class="linenos">48</span></a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">slice</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DB-49"><a href="#DB-49"><span class="linenos">49</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="DB-49"><a href="#DB-49"><span class="linenos">49</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="DB-50"><a href="#DB-50"><span class="linenos">50</span></a><span class="sd">            Use indexing and slicing over db.</span>
 </span><span id="DB-51"><a href="#DB-51"><span class="linenos">51</span></a>
 </span><span id="DB-52"><a href="#DB-52"><span class="linenos">52</span></a><span class="sd">            Args:</span>
@@ -222,13 +222,13 @@
 </span><span id="DB-64"><a href="#DB-64"><span class="linenos">64</span></a>            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </span><span id="DB-65"><a href="#DB-65"><span class="linenos">65</span></a>
 </span><span id="DB-66"><a href="#DB-66"><span class="linenos">66</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DB</span><span class="p">:</span>
-</span><span id="DB-67"><a href="#DB-67"><span class="linenos">67</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="DB-67"><a href="#DB-67"><span class="linenos">67</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="DB-68"><a href="#DB-68"><span class="linenos">68</span></a><span class="sd">            Save DB.</span>
 </span><span id="DB-69"><a href="#DB-69"><span class="linenos">69</span></a><span class="sd">        &#39;&#39;&#39;</span>
 </span><span id="DB-70"><a href="#DB-70"><span class="linenos">70</span></a>        <span class="k">return</span> <span class="bp">self</span>
 </span><span id="DB-71"><a href="#DB-71"><span class="linenos">71</span></a>
 </span><span id="DB-72"><a href="#DB-72"><span class="linenos">72</span></a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saved_dict</span><span class="p">):</span>
-</span><span id="DB-73"><a href="#DB-73"><span class="linenos">73</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="DB-73"><a href="#DB-73"><span class="linenos">73</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="DB-74"><a href="#DB-74"><span class="linenos">74</span></a><span class="sd">            Reload DB.</span>
 </span><span id="DB-75"><a href="#DB-75"><span class="linenos">75</span></a><span class="sd">        &#39;&#39;&#39;</span>
 </span><span id="DB-76"><a href="#DB-76"><span class="linenos">76</span></a>        <span class="k">pass</span>
@@ -361,7 +361,7 @@ context manager::</p>
     </div>
     <a class="headerlink" href="#DB.to_autodisc_history"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DB.to_autodisc_history-19"><a href="#DB.to_autodisc_history-19"><span class="linenos">19</span></a>    <span class="k">def</span> <span class="nf">to_autodisc_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">documents</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">keys</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">new_keys</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">History</span><span class="p">:</span>
-</span><span id="DB.to_autodisc_history-20"><a href="#DB.to_autodisc_history-20"><span class="linenos">20</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="DB.to_autodisc_history-20"><a href="#DB.to_autodisc_history-20"><span class="linenos">20</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="DB.to_autodisc_history-21"><a href="#DB.to_autodisc_history-21"><span class="linenos">21</span></a><span class="sd">            Select only some keys in documents and return a History. Use `new_keys` to rename these keys in the returned History.</span>
 </span><span id="DB.to_autodisc_history-22"><a href="#DB.to_autodisc_history-22"><span class="linenos">22</span></a>
 </span><span id="DB.to_autodisc_history-23"><a href="#DB.to_autodisc_history-23"><span class="linenos">23</span></a><span class="sd">            Args:</span>
@@ -415,7 +415,7 @@ Returns:
     </div>
     <a class="headerlink" href="#DB.save"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DB.save-66"><a href="#DB.save-66"><span class="linenos">66</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DB</span><span class="p">:</span>
-</span><span id="DB.save-67"><a href="#DB.save-67"><span class="linenos">67</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="DB.save-67"><a href="#DB.save-67"><span class="linenos">67</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="DB.save-68"><a href="#DB.save-68"><span class="linenos">68</span></a><span class="sd">            Save DB.</span>
 </span><span id="DB.save-69"><a href="#DB.save-69"><span class="linenos">69</span></a><span class="sd">        &#39;&#39;&#39;</span>
 </span><span id="DB.save-70"><a href="#DB.save-70"><span class="linenos">70</span></a>        <span class="k">return</span> <span class="bp">self</span>
@@ -439,7 +439,7 @@ Returns:
     </div>
     <a class="headerlink" href="#DB.load"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DB.load-72"><a href="#DB.load-72"><span class="linenos">72</span></a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saved_dict</span><span class="p">):</span>
-</span><span id="DB.load-73"><a href="#DB.load-73"><span class="linenos">73</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="DB.load-73"><a href="#DB.load-73"><span class="linenos">73</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="DB.load-74"><a href="#DB.load-74"><span class="linenos">74</span></a><span class="sd">            Reload DB.</span>
 </span><span id="DB.load-75"><a href="#DB.load-75"><span class="linenos">75</span></a><span class="sd">        &#39;&#39;&#39;</span>
 </span><span id="DB.load-76"><a href="#DB.load-76"><span class="linenos">76</span></a>        <span class="k">pass</span>

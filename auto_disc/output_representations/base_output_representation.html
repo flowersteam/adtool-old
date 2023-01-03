@@ -77,7 +77,7 @@
 </span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>
 </span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="k">class</span> <span class="nc">BaseOutputRepresentation</span> <span class="p">(</span><span class="n">BaseAutoDiscModule</span><span class="p">):</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="sd">    Base class to map the observations of a system to an embedding vector (BC characterization)</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>
@@ -91,7 +91,7 @@
 </span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_initial_output_space_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_space</span><span class="p">]</span>
 </span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a>
 </span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a><span class="sd">        Defines input and output space for the output representation</span>
 </span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">input_space</span> <span class="o">=</span> <span class="n">input_space</span>
@@ -100,7 +100,7 @@
 </span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a>                <span class="bp">self</span><span class="o">.</span><span class="n">output_space</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_space</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 </span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a>
 </span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a>    <span class="k">def</span> <span class="nf">map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">is_output_new_discovery</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a><span class="sd">            Map the input (system&#39;s output) to another space (towards the explorer&#39;s input space)</span>
 </span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a>
 </span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a><span class="sd">            #### Args:</span>
@@ -110,7 +110,7 @@
 </span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a>
 </span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a>    <span class="k">def</span> <span class="nf">calc_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embedding_a</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">embedding_b</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-43"><a href="#L-43"><span class="linenos">43</span></a><span class="sd">            Compute the distance between 2 embeddings in the latent space</span>
 </span><span id="L-44"><a href="#L-44"><span class="linenos">44</span></a>
 </span><span id="L-45"><a href="#L-45"><span class="linenos">45</span></a><span class="sd">            **NOTE**: batch mode embedding_a and embedding_b can be `N*M` or `M`</span>
@@ -132,7 +132,7 @@
     </div>
     <a class="headerlink" href="#BaseOutputRepresentation"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseOutputRepresentation-9"><a href="#BaseOutputRepresentation-9"><span class="linenos"> 9</span></a><span class="k">class</span> <span class="nc">BaseOutputRepresentation</span> <span class="p">(</span><span class="n">BaseAutoDiscModule</span><span class="p">):</span>
-</span><span id="BaseOutputRepresentation-10"><a href="#BaseOutputRepresentation-10"><span class="linenos">10</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOutputRepresentation-10"><a href="#BaseOutputRepresentation-10"><span class="linenos">10</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation-11"><a href="#BaseOutputRepresentation-11"><span class="linenos">11</span></a><span class="sd">    Base class to map the observations of a system to an embedding vector (BC characterization)</span>
 </span><span id="BaseOutputRepresentation-12"><a href="#BaseOutputRepresentation-12"><span class="linenos">12</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation-13"><a href="#BaseOutputRepresentation-13"><span class="linenos">13</span></a>
@@ -146,7 +146,7 @@
 </span><span id="BaseOutputRepresentation-21"><a href="#BaseOutputRepresentation-21"><span class="linenos">21</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_initial_output_space_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_space</span><span class="p">]</span>
 </span><span id="BaseOutputRepresentation-22"><a href="#BaseOutputRepresentation-22"><span class="linenos">22</span></a>
 </span><span id="BaseOutputRepresentation-23"><a href="#BaseOutputRepresentation-23"><span class="linenos">23</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseOutputRepresentation-24"><a href="#BaseOutputRepresentation-24"><span class="linenos">24</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOutputRepresentation-24"><a href="#BaseOutputRepresentation-24"><span class="linenos">24</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation-25"><a href="#BaseOutputRepresentation-25"><span class="linenos">25</span></a><span class="sd">        Defines input and output space for the output representation</span>
 </span><span id="BaseOutputRepresentation-26"><a href="#BaseOutputRepresentation-26"><span class="linenos">26</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation-27"><a href="#BaseOutputRepresentation-27"><span class="linenos">27</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">input_space</span> <span class="o">=</span> <span class="n">input_space</span>
@@ -155,7 +155,7 @@
 </span><span id="BaseOutputRepresentation-30"><a href="#BaseOutputRepresentation-30"><span class="linenos">30</span></a>                <span class="bp">self</span><span class="o">.</span><span class="n">output_space</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">input_space</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 </span><span id="BaseOutputRepresentation-31"><a href="#BaseOutputRepresentation-31"><span class="linenos">31</span></a>
 </span><span id="BaseOutputRepresentation-32"><a href="#BaseOutputRepresentation-32"><span class="linenos">32</span></a>    <span class="k">def</span> <span class="nf">map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">is_output_new_discovery</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="BaseOutputRepresentation-33"><a href="#BaseOutputRepresentation-33"><span class="linenos">33</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOutputRepresentation-33"><a href="#BaseOutputRepresentation-33"><span class="linenos">33</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation-34"><a href="#BaseOutputRepresentation-34"><span class="linenos">34</span></a><span class="sd">            Map the input (system&#39;s output) to another space (towards the explorer&#39;s input space)</span>
 </span><span id="BaseOutputRepresentation-35"><a href="#BaseOutputRepresentation-35"><span class="linenos">35</span></a>
 </span><span id="BaseOutputRepresentation-36"><a href="#BaseOutputRepresentation-36"><span class="linenos">36</span></a><span class="sd">            #### Args:</span>
@@ -165,7 +165,7 @@
 </span><span id="BaseOutputRepresentation-40"><a href="#BaseOutputRepresentation-40"><span class="linenos">40</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseOutputRepresentation-41"><a href="#BaseOutputRepresentation-41"><span class="linenos">41</span></a>
 </span><span id="BaseOutputRepresentation-42"><a href="#BaseOutputRepresentation-42"><span class="linenos">42</span></a>    <span class="k">def</span> <span class="nf">calc_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embedding_a</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">embedding_b</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="BaseOutputRepresentation-43"><a href="#BaseOutputRepresentation-43"><span class="linenos">43</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOutputRepresentation-43"><a href="#BaseOutputRepresentation-43"><span class="linenos">43</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation-44"><a href="#BaseOutputRepresentation-44"><span class="linenos">44</span></a><span class="sd">            Compute the distance between 2 embeddings in the latent space</span>
 </span><span id="BaseOutputRepresentation-45"><a href="#BaseOutputRepresentation-45"><span class="linenos">45</span></a>
 </span><span id="BaseOutputRepresentation-46"><a href="#BaseOutputRepresentation-46"><span class="linenos">46</span></a><span class="sd">            **NOTE**: batch mode embedding_a and embedding_b can be `N*M` or `M`</span>
@@ -220,7 +220,7 @@
     </div>
     <a class="headerlink" href="#BaseOutputRepresentation.initialize"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseOutputRepresentation.initialize-23"><a href="#BaseOutputRepresentation.initialize-23"><span class="linenos">23</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseOutputRepresentation.initialize-24"><a href="#BaseOutputRepresentation.initialize-24"><span class="linenos">24</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOutputRepresentation.initialize-24"><a href="#BaseOutputRepresentation.initialize-24"><span class="linenos">24</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation.initialize-25"><a href="#BaseOutputRepresentation.initialize-25"><span class="linenos">25</span></a><span class="sd">        Defines input and output space for the output representation</span>
 </span><span id="BaseOutputRepresentation.initialize-26"><a href="#BaseOutputRepresentation.initialize-26"><span class="linenos">26</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation.initialize-27"><a href="#BaseOutputRepresentation.initialize-27"><span class="linenos">27</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">input_space</span> <span class="o">=</span> <span class="n">input_space</span>
@@ -247,7 +247,7 @@
     </div>
     <a class="headerlink" href="#BaseOutputRepresentation.map"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseOutputRepresentation.map-32"><a href="#BaseOutputRepresentation.map-32"><span class="linenos">32</span></a>    <span class="k">def</span> <span class="nf">map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">is_output_new_discovery</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="BaseOutputRepresentation.map-33"><a href="#BaseOutputRepresentation.map-33"><span class="linenos">33</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOutputRepresentation.map-33"><a href="#BaseOutputRepresentation.map-33"><span class="linenos">33</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation.map-34"><a href="#BaseOutputRepresentation.map-34"><span class="linenos">34</span></a><span class="sd">            Map the input (system&#39;s output) to another space (towards the explorer&#39;s input space)</span>
 </span><span id="BaseOutputRepresentation.map-35"><a href="#BaseOutputRepresentation.map-35"><span class="linenos">35</span></a>
 </span><span id="BaseOutputRepresentation.map-36"><a href="#BaseOutputRepresentation.map-36"><span class="linenos">36</span></a><span class="sd">            #### Args:</span>
@@ -282,7 +282,7 @@
     </div>
     <a class="headerlink" href="#BaseOutputRepresentation.calc_distance"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseOutputRepresentation.calc_distance-42"><a href="#BaseOutputRepresentation.calc_distance-42"><span class="linenos">42</span></a>    <span class="k">def</span> <span class="nf">calc_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embedding_a</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="n">embedding_b</span><span class="p">:</span> <span class="n">Tensor</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="BaseOutputRepresentation.calc_distance-43"><a href="#BaseOutputRepresentation.calc_distance-43"><span class="linenos">43</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOutputRepresentation.calc_distance-43"><a href="#BaseOutputRepresentation.calc_distance-43"><span class="linenos">43</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOutputRepresentation.calc_distance-44"><a href="#BaseOutputRepresentation.calc_distance-44"><span class="linenos">44</span></a><span class="sd">            Compute the distance between 2 embeddings in the latent space</span>
 </span><span id="BaseOutputRepresentation.calc_distance-45"><a href="#BaseOutputRepresentation.calc_distance-45"><span class="linenos">45</span></a>
 </span><span id="BaseOutputRepresentation.calc_distance-46"><a href="#BaseOutputRepresentation.calc_distance-46"><span class="linenos">46</span></a><span class="sd">            **NOTE**: batch mode embedding_a and embedding_b can be `N*M` or `M`</span>

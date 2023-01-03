@@ -90,7 +90,7 @@
 </span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a><span class="kn">from</span> <span class="nn">auto_disc.utils.mutators</span> <span class="kn">import</span> <span class="n">BaseMutator</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos">  8</span></a>
 </span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a><span class="k">class</span> <span class="nc">BoxSpace</span><span class="p">(</span><span class="n">BaseSpace</span><span class="p">):</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos"> 10</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos"> 10</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos"> 11</span></a><span class="sd">    A (possibly unbounded) box in R^n. Specifically, a Box represents the</span>
 </span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a><span class="sd">    Cartesian product of n closed intervals. Each interval has the form of one</span>
 </span><span id="L-13"><a href="#L-13"><span class="linenos"> 13</span></a><span class="sd">    of [a, b], (-oo, b], [a, oo), or (-oo, oo).</span>
@@ -108,7 +108,7 @@
 </span><span id="L-25"><a href="#L-25"><span class="linenos"> 25</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-26"><a href="#L-26"><span class="linenos"> 26</span></a>
 </span><span id="L-27"><a href="#L-27"><span class="linenos"> 27</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">low</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">high</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span><span class="n">BaseMutator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="nb">tuple</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">indpb</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-28"><a href="#L-28"><span class="linenos"> 28</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-28"><a href="#L-28"><span class="linenos"> 28</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-29"><a href="#L-29"><span class="linenos"> 29</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="L-30"><a href="#L-30"><span class="linenos"> 30</span></a>
 </span><span id="L-31"><a href="#L-31"><span class="linenos"> 31</span></a><span class="sd">            Args:</span>
@@ -142,7 +142,7 @@
 </span><span id="L-59"><a href="#L-59"><span class="linenos"> 59</span></a>        <span class="nb">super</span><span class="p">(</span><span class="n">BoxSpace</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">mutator</span><span class="p">)</span>
 </span><span id="L-60"><a href="#L-60"><span class="linenos"> 60</span></a>
 </span><span id="L-61"><a href="#L-61"><span class="linenos"> 61</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-62"><a href="#L-62"><span class="linenos"> 62</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-62"><a href="#L-62"><span class="linenos"> 62</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-63"><a href="#L-63"><span class="linenos"> 63</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="L-64"><a href="#L-64"><span class="linenos"> 64</span></a>
 </span><span id="L-65"><a href="#L-65"><span class="linenos"> 65</span></a><span class="sd">            Args:</span>
@@ -172,7 +172,7 @@
 </span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">indpb</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_indpb</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 </span><span id="L-90"><a href="#L-90"><span class="linenos"> 90</span></a>
 </span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a>    <span class="k">def</span> <span class="nf">is_bounded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manner</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">bool</span><span class="p">:</span>
-</span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-93"><a href="#L-93"><span class="linenos"> 93</span></a><span class="sd">            Check if the space is bounded (below above or both)</span>
 </span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a>
 </span><span id="L-95"><a href="#L-95"><span class="linenos"> 95</span></a><span class="sd">            Args:</span>
@@ -190,7 +190,7 @@
 </span><span id="L-107"><a href="#L-107"><span class="linenos">107</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;manner is not in {&#39;below&#39;, &#39;above&#39;, &#39;both&#39;}&quot;</span><span class="p">)</span>
 </span><span id="L-108"><a href="#L-108"><span class="linenos">108</span></a>
 </span><span id="L-109"><a href="#L-109"><span class="linenos">109</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="L-110"><a href="#L-110"><span class="linenos">110</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-110"><a href="#L-110"><span class="linenos">110</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-111"><a href="#L-111"><span class="linenos">111</span></a><span class="sd">        Generates a single random sample inside of the Box.</span>
 </span><span id="L-112"><a href="#L-112"><span class="linenos">112</span></a>
 </span><span id="L-113"><a href="#L-113"><span class="linenos">113</span></a><span class="sd">        In creating a sample of the box, each coordinate is sampled according to</span>
@@ -232,7 +232,7 @@
 </span><span id="L-149"><a href="#L-149"><span class="linenos">149</span></a>        <span class="k">return</span> <span class="n">sample</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </span><span id="L-150"><a href="#L-150"><span class="linenos">150</span></a>
 </span><span id="L-151"><a href="#L-151"><span class="linenos">151</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="L-152"><a href="#L-152"><span class="linenos">152</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-152"><a href="#L-152"><span class="linenos">152</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-153"><a href="#L-153"><span class="linenos">153</span></a><span class="sd">            Apply the mutation of the mutator on x</span>
 </span><span id="L-154"><a href="#L-154"><span class="linenos">154</span></a>
 </span><span id="L-155"><a href="#L-155"><span class="linenos">155</span></a><span class="sd">            Args:</span>
@@ -254,7 +254,7 @@
 </span><span id="L-171"><a href="#L-171"><span class="linenos">171</span></a>            <span class="k">return</span> <span class="n">x</span>
 </span><span id="L-172"><a href="#L-172"><span class="linenos">172</span></a>
 </span><span id="L-173"><a href="#L-173"><span class="linenos">173</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">List</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="L-174"><a href="#L-174"><span class="linenos">174</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-174"><a href="#L-174"><span class="linenos">174</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-175"><a href="#L-175"><span class="linenos">175</span></a><span class="sd">            Check if x is included in the space</span>
 </span><span id="L-176"><a href="#L-176"><span class="linenos">176</span></a>
 </span><span id="L-177"><a href="#L-177"><span class="linenos">177</span></a><span class="sd">            Args:</span>
@@ -267,7 +267,7 @@
 </span><span id="L-184"><a href="#L-184"><span class="linenos">184</span></a>        <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">low</span><span class="p">)</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">high</span><span class="p">)</span>
 </span><span id="L-185"><a href="#L-185"><span class="linenos">185</span></a>
 </span><span id="L-186"><a href="#L-186"><span class="linenos">186</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="L-187"><a href="#L-187"><span class="linenos">187</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-187"><a href="#L-187"><span class="linenos">187</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-188"><a href="#L-188"><span class="linenos">188</span></a><span class="sd">            Set x to an acceptable value of the space</span>
 </span><span id="L-189"><a href="#L-189"><span class="linenos">189</span></a><span class="sd">            Args:</span>
 </span><span id="L-190"><a href="#L-190"><span class="linenos">190</span></a><span class="sd">                x: The value to set</span>
@@ -281,7 +281,7 @@
 </span><span id="L-198"><a href="#L-198"><span class="linenos">198</span></a>        <span class="k">return</span> <span class="n">x</span>
 </span><span id="L-199"><a href="#L-199"><span class="linenos">199</span></a>
 </span><span id="L-200"><a href="#L-200"><span class="linenos">200</span></a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span><span id="L-201"><a href="#L-201"><span class="linenos">201</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-201"><a href="#L-201"><span class="linenos">201</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-202"><a href="#L-202"><span class="linenos">202</span></a><span class="sd">            Give a string representation of the class&#39;s object</span>
 </span><span id="L-203"><a href="#L-203"><span class="linenos">203</span></a>
 </span><span id="L-204"><a href="#L-204"><span class="linenos">204</span></a><span class="sd">            Returns:</span>
@@ -290,7 +290,7 @@
 </span><span id="L-207"><a href="#L-207"><span class="linenos">207</span></a>        <span class="k">return</span> <span class="s2">&quot;BoxSpace(</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">low</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">high</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </span><span id="L-208"><a href="#L-208"><span class="linenos">208</span></a>
 </span><span id="L-209"><a href="#L-209"><span class="linenos">209</span></a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="L-210"><a href="#L-210"><span class="linenos">210</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-210"><a href="#L-210"><span class="linenos">210</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-211"><a href="#L-211"><span class="linenos">211</span></a><span class="sd">            Check if the other object are equal to the current object</span>
 </span><span id="L-212"><a href="#L-212"><span class="linenos">212</span></a>
 </span><span id="L-213"><a href="#L-213"><span class="linenos">213</span></a><span class="sd">            Args:</span>
@@ -303,7 +303,7 @@
 </span><span id="L-220"><a href="#L-220"><span class="linenos">220</span></a>            <span class="bp">self</span><span class="o">.</span><span class="n">high</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">high</span><span class="p">)</span>
 </span><span id="L-221"><a href="#L-221"><span class="linenos">221</span></a>
 </span><span id="L-222"><a href="#L-222"><span class="linenos">222</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]:</span>
-</span><span id="L-223"><a href="#L-223"><span class="linenos">223</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-223"><a href="#L-223"><span class="linenos">223</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-224"><a href="#L-224"><span class="linenos">224</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="L-225"><a href="#L-225"><span class="linenos">225</span></a>
 </span><span id="L-226"><a href="#L-226"><span class="linenos">226</span></a><span class="sd">            Returns:</span>
@@ -330,7 +330,7 @@
     </div>
     <a class="headerlink" href="#BoxSpace"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace-10"><a href="#BoxSpace-10"><span class="linenos"> 10</span></a><span class="k">class</span> <span class="nc">BoxSpace</span><span class="p">(</span><span class="n">BaseSpace</span><span class="p">):</span>
-</span><span id="BoxSpace-11"><a href="#BoxSpace-11"><span class="linenos"> 11</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-11"><a href="#BoxSpace-11"><span class="linenos"> 11</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-12"><a href="#BoxSpace-12"><span class="linenos"> 12</span></a><span class="sd">    A (possibly unbounded) box in R^n. Specifically, a Box represents the</span>
 </span><span id="BoxSpace-13"><a href="#BoxSpace-13"><span class="linenos"> 13</span></a><span class="sd">    Cartesian product of n closed intervals. Each interval has the form of one</span>
 </span><span id="BoxSpace-14"><a href="#BoxSpace-14"><span class="linenos"> 14</span></a><span class="sd">    of [a, b], (-oo, b], [a, oo), or (-oo, oo).</span>
@@ -348,7 +348,7 @@
 </span><span id="BoxSpace-26"><a href="#BoxSpace-26"><span class="linenos"> 26</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="BoxSpace-27"><a href="#BoxSpace-27"><span class="linenos"> 27</span></a>
 </span><span id="BoxSpace-28"><a href="#BoxSpace-28"><span class="linenos"> 28</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">low</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">high</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span><span class="n">BaseMutator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="nb">tuple</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">indpb</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BoxSpace-29"><a href="#BoxSpace-29"><span class="linenos"> 29</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-29"><a href="#BoxSpace-29"><span class="linenos"> 29</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-30"><a href="#BoxSpace-30"><span class="linenos"> 30</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="BoxSpace-31"><a href="#BoxSpace-31"><span class="linenos"> 31</span></a>
 </span><span id="BoxSpace-32"><a href="#BoxSpace-32"><span class="linenos"> 32</span></a><span class="sd">            Args:</span>
@@ -382,7 +382,7 @@
 </span><span id="BoxSpace-60"><a href="#BoxSpace-60"><span class="linenos"> 60</span></a>        <span class="nb">super</span><span class="p">(</span><span class="n">BoxSpace</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">mutator</span><span class="p">)</span>
 </span><span id="BoxSpace-61"><a href="#BoxSpace-61"><span class="linenos"> 61</span></a>
 </span><span id="BoxSpace-62"><a href="#BoxSpace-62"><span class="linenos"> 62</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BoxSpace-63"><a href="#BoxSpace-63"><span class="linenos"> 63</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-63"><a href="#BoxSpace-63"><span class="linenos"> 63</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-64"><a href="#BoxSpace-64"><span class="linenos"> 64</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="BoxSpace-65"><a href="#BoxSpace-65"><span class="linenos"> 65</span></a>
 </span><span id="BoxSpace-66"><a href="#BoxSpace-66"><span class="linenos"> 66</span></a><span class="sd">            Args:</span>
@@ -412,7 +412,7 @@
 </span><span id="BoxSpace-90"><a href="#BoxSpace-90"><span class="linenos"> 90</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">indpb</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_indpb</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 </span><span id="BoxSpace-91"><a href="#BoxSpace-91"><span class="linenos"> 91</span></a>
 </span><span id="BoxSpace-92"><a href="#BoxSpace-92"><span class="linenos"> 92</span></a>    <span class="k">def</span> <span class="nf">is_bounded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manner</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">bool</span><span class="p">:</span>
-</span><span id="BoxSpace-93"><a href="#BoxSpace-93"><span class="linenos"> 93</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-93"><a href="#BoxSpace-93"><span class="linenos"> 93</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-94"><a href="#BoxSpace-94"><span class="linenos"> 94</span></a><span class="sd">            Check if the space is bounded (below above or both)</span>
 </span><span id="BoxSpace-95"><a href="#BoxSpace-95"><span class="linenos"> 95</span></a>
 </span><span id="BoxSpace-96"><a href="#BoxSpace-96"><span class="linenos"> 96</span></a><span class="sd">            Args:</span>
@@ -430,7 +430,7 @@
 </span><span id="BoxSpace-108"><a href="#BoxSpace-108"><span class="linenos">108</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;manner is not in {&#39;below&#39;, &#39;above&#39;, &#39;both&#39;}&quot;</span><span class="p">)</span>
 </span><span id="BoxSpace-109"><a href="#BoxSpace-109"><span class="linenos">109</span></a>
 </span><span id="BoxSpace-110"><a href="#BoxSpace-110"><span class="linenos">110</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BoxSpace-111"><a href="#BoxSpace-111"><span class="linenos">111</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-111"><a href="#BoxSpace-111"><span class="linenos">111</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-112"><a href="#BoxSpace-112"><span class="linenos">112</span></a><span class="sd">        Generates a single random sample inside of the Box.</span>
 </span><span id="BoxSpace-113"><a href="#BoxSpace-113"><span class="linenos">113</span></a>
 </span><span id="BoxSpace-114"><a href="#BoxSpace-114"><span class="linenos">114</span></a><span class="sd">        In creating a sample of the box, each coordinate is sampled according to</span>
@@ -472,7 +472,7 @@
 </span><span id="BoxSpace-150"><a href="#BoxSpace-150"><span class="linenos">150</span></a>        <span class="k">return</span> <span class="n">sample</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </span><span id="BoxSpace-151"><a href="#BoxSpace-151"><span class="linenos">151</span></a>
 </span><span id="BoxSpace-152"><a href="#BoxSpace-152"><span class="linenos">152</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="BoxSpace-153"><a href="#BoxSpace-153"><span class="linenos">153</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-153"><a href="#BoxSpace-153"><span class="linenos">153</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-154"><a href="#BoxSpace-154"><span class="linenos">154</span></a><span class="sd">            Apply the mutation of the mutator on x</span>
 </span><span id="BoxSpace-155"><a href="#BoxSpace-155"><span class="linenos">155</span></a>
 </span><span id="BoxSpace-156"><a href="#BoxSpace-156"><span class="linenos">156</span></a><span class="sd">            Args:</span>
@@ -494,7 +494,7 @@
 </span><span id="BoxSpace-172"><a href="#BoxSpace-172"><span class="linenos">172</span></a>            <span class="k">return</span> <span class="n">x</span>
 </span><span id="BoxSpace-173"><a href="#BoxSpace-173"><span class="linenos">173</span></a>
 </span><span id="BoxSpace-174"><a href="#BoxSpace-174"><span class="linenos">174</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">List</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="BoxSpace-175"><a href="#BoxSpace-175"><span class="linenos">175</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-175"><a href="#BoxSpace-175"><span class="linenos">175</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-176"><a href="#BoxSpace-176"><span class="linenos">176</span></a><span class="sd">            Check if x is included in the space</span>
 </span><span id="BoxSpace-177"><a href="#BoxSpace-177"><span class="linenos">177</span></a>
 </span><span id="BoxSpace-178"><a href="#BoxSpace-178"><span class="linenos">178</span></a><span class="sd">            Args:</span>
@@ -507,7 +507,7 @@
 </span><span id="BoxSpace-185"><a href="#BoxSpace-185"><span class="linenos">185</span></a>        <span class="k">return</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">low</span><span class="p">)</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">high</span><span class="p">)</span>
 </span><span id="BoxSpace-186"><a href="#BoxSpace-186"><span class="linenos">186</span></a>
 </span><span id="BoxSpace-187"><a href="#BoxSpace-187"><span class="linenos">187</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="BoxSpace-188"><a href="#BoxSpace-188"><span class="linenos">188</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-188"><a href="#BoxSpace-188"><span class="linenos">188</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-189"><a href="#BoxSpace-189"><span class="linenos">189</span></a><span class="sd">            Set x to an acceptable value of the space</span>
 </span><span id="BoxSpace-190"><a href="#BoxSpace-190"><span class="linenos">190</span></a><span class="sd">            Args:</span>
 </span><span id="BoxSpace-191"><a href="#BoxSpace-191"><span class="linenos">191</span></a><span class="sd">                x: The value to set</span>
@@ -521,7 +521,7 @@
 </span><span id="BoxSpace-199"><a href="#BoxSpace-199"><span class="linenos">199</span></a>        <span class="k">return</span> <span class="n">x</span>
 </span><span id="BoxSpace-200"><a href="#BoxSpace-200"><span class="linenos">200</span></a>
 </span><span id="BoxSpace-201"><a href="#BoxSpace-201"><span class="linenos">201</span></a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span><span id="BoxSpace-202"><a href="#BoxSpace-202"><span class="linenos">202</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-202"><a href="#BoxSpace-202"><span class="linenos">202</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-203"><a href="#BoxSpace-203"><span class="linenos">203</span></a><span class="sd">            Give a string representation of the class&#39;s object</span>
 </span><span id="BoxSpace-204"><a href="#BoxSpace-204"><span class="linenos">204</span></a>
 </span><span id="BoxSpace-205"><a href="#BoxSpace-205"><span class="linenos">205</span></a><span class="sd">            Returns:</span>
@@ -530,7 +530,7 @@
 </span><span id="BoxSpace-208"><a href="#BoxSpace-208"><span class="linenos">208</span></a>        <span class="k">return</span> <span class="s2">&quot;BoxSpace(</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">low</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">high</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </span><span id="BoxSpace-209"><a href="#BoxSpace-209"><span class="linenos">209</span></a>
 </span><span id="BoxSpace-210"><a href="#BoxSpace-210"><span class="linenos">210</span></a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="BoxSpace-211"><a href="#BoxSpace-211"><span class="linenos">211</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-211"><a href="#BoxSpace-211"><span class="linenos">211</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-212"><a href="#BoxSpace-212"><span class="linenos">212</span></a><span class="sd">            Check if the other object are equal to the current object</span>
 </span><span id="BoxSpace-213"><a href="#BoxSpace-213"><span class="linenos">213</span></a>
 </span><span id="BoxSpace-214"><a href="#BoxSpace-214"><span class="linenos">214</span></a><span class="sd">            Args:</span>
@@ -543,7 +543,7 @@
 </span><span id="BoxSpace-221"><a href="#BoxSpace-221"><span class="linenos">221</span></a>            <span class="bp">self</span><span class="o">.</span><span class="n">high</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">high</span><span class="p">)</span>
 </span><span id="BoxSpace-222"><a href="#BoxSpace-222"><span class="linenos">222</span></a>
 </span><span id="BoxSpace-223"><a href="#BoxSpace-223"><span class="linenos">223</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]:</span>
-</span><span id="BoxSpace-224"><a href="#BoxSpace-224"><span class="linenos">224</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace-224"><a href="#BoxSpace-224"><span class="linenos">224</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace-225"><a href="#BoxSpace-225"><span class="linenos">225</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="BoxSpace-226"><a href="#BoxSpace-226"><span class="linenos">226</span></a>
 </span><span id="BoxSpace-227"><a href="#BoxSpace-227"><span class="linenos">227</span></a><span class="sd">            Returns:</span>
@@ -593,7 +593,7 @@ of [a, b], (-oo, b], [a, oo), or (-oo, oo).</p>
     </div>
     <a class="headerlink" href="#BoxSpace.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace.__init__-28"><a href="#BoxSpace.__init__-28"><span class="linenos">28</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">low</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">high</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span><span class="n">BaseMutator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="nb">tuple</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">indpb</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BoxSpace.__init__-29"><a href="#BoxSpace.__init__-29"><span class="linenos">29</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace.__init__-29"><a href="#BoxSpace.__init__-29"><span class="linenos">29</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace.__init__-30"><a href="#BoxSpace.__init__-30"><span class="linenos">30</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="BoxSpace.__init__-31"><a href="#BoxSpace.__init__-31"><span class="linenos">31</span></a>
 </span><span id="BoxSpace.__init__-32"><a href="#BoxSpace.__init__-32"><span class="linenos">32</span></a><span class="sd">            Args:</span>
@@ -653,7 +653,7 @@ of [a, b], (-oo, b], [a, oo), or (-oo, oo).</p>
     </div>
     <a class="headerlink" href="#BoxSpace.initialize"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace.initialize-62"><a href="#BoxSpace.initialize-62"><span class="linenos">62</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BoxSpace.initialize-63"><a href="#BoxSpace.initialize-63"><span class="linenos">63</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace.initialize-63"><a href="#BoxSpace.initialize-63"><span class="linenos">63</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace.initialize-64"><a href="#BoxSpace.initialize-64"><span class="linenos">64</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="BoxSpace.initialize-65"><a href="#BoxSpace.initialize-65"><span class="linenos">65</span></a>
 </span><span id="BoxSpace.initialize-66"><a href="#BoxSpace.initialize-66"><span class="linenos">66</span></a><span class="sd">            Args:</span>
@@ -704,7 +704,7 @@ of [a, b], (-oo, b], [a, oo), or (-oo, oo).</p>
     </div>
     <a class="headerlink" href="#BoxSpace.is_bounded"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace.is_bounded-92"><a href="#BoxSpace.is_bounded-92"><span class="linenos"> 92</span></a>    <span class="k">def</span> <span class="nf">is_bounded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manner</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">bool</span><span class="p">:</span>
-</span><span id="BoxSpace.is_bounded-93"><a href="#BoxSpace.is_bounded-93"><span class="linenos"> 93</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace.is_bounded-93"><a href="#BoxSpace.is_bounded-93"><span class="linenos"> 93</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace.is_bounded-94"><a href="#BoxSpace.is_bounded-94"><span class="linenos"> 94</span></a><span class="sd">            Check if the space is bounded (below above or both)</span>
 </span><span id="BoxSpace.is_bounded-95"><a href="#BoxSpace.is_bounded-95"><span class="linenos"> 95</span></a>
 </span><span id="BoxSpace.is_bounded-96"><a href="#BoxSpace.is_bounded-96"><span class="linenos"> 96</span></a><span class="sd">            Args:</span>
@@ -743,7 +743,7 @@ of [a, b], (-oo, b], [a, oo), or (-oo, oo).</p>
     </div>
     <a class="headerlink" href="#BoxSpace.sample"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace.sample-110"><a href="#BoxSpace.sample-110"><span class="linenos">110</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BoxSpace.sample-111"><a href="#BoxSpace.sample-111"><span class="linenos">111</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace.sample-111"><a href="#BoxSpace.sample-111"><span class="linenos">111</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace.sample-112"><a href="#BoxSpace.sample-112"><span class="linenos">112</span></a><span class="sd">        Generates a single random sample inside of the Box.</span>
 </span><span id="BoxSpace.sample-113"><a href="#BoxSpace.sample-113"><span class="linenos">113</span></a>
 </span><span id="BoxSpace.sample-114"><a href="#BoxSpace.sample-114"><span class="linenos">114</span></a><span class="sd">        In creating a sample of the box, each coordinate is sampled according to</span>
@@ -816,7 +816,7 @@ the form of the interval:</p>
     </div>
     <a class="headerlink" href="#BoxSpace.mutate"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace.mutate-152"><a href="#BoxSpace.mutate-152"><span class="linenos">152</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="BoxSpace.mutate-153"><a href="#BoxSpace.mutate-153"><span class="linenos">153</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace.mutate-153"><a href="#BoxSpace.mutate-153"><span class="linenos">153</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace.mutate-154"><a href="#BoxSpace.mutate-154"><span class="linenos">154</span></a><span class="sd">            Apply the mutation of the mutator on x</span>
 </span><span id="BoxSpace.mutate-155"><a href="#BoxSpace.mutate-155"><span class="linenos">155</span></a>
 </span><span id="BoxSpace.mutate-156"><a href="#BoxSpace.mutate-156"><span class="linenos">156</span></a><span class="sd">            Args:</span>
@@ -861,7 +861,7 @@ Returns:
     </div>
     <a class="headerlink" href="#BoxSpace.contains"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace.contains-174"><a href="#BoxSpace.contains-174"><span class="linenos">174</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">List</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="BoxSpace.contains-175"><a href="#BoxSpace.contains-175"><span class="linenos">175</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace.contains-175"><a href="#BoxSpace.contains-175"><span class="linenos">175</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace.contains-176"><a href="#BoxSpace.contains-176"><span class="linenos">176</span></a><span class="sd">            Check if x is included in the space</span>
 </span><span id="BoxSpace.contains-177"><a href="#BoxSpace.contains-177"><span class="linenos">177</span></a>
 </span><span id="BoxSpace.contains-178"><a href="#BoxSpace.contains-178"><span class="linenos">178</span></a><span class="sd">            Args:</span>
@@ -897,7 +897,7 @@ Returns:
     </div>
     <a class="headerlink" href="#BoxSpace.clamp"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace.clamp-187"><a href="#BoxSpace.clamp-187"><span class="linenos">187</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="BoxSpace.clamp-188"><a href="#BoxSpace.clamp-188"><span class="linenos">188</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace.clamp-188"><a href="#BoxSpace.clamp-188"><span class="linenos">188</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace.clamp-189"><a href="#BoxSpace.clamp-189"><span class="linenos">189</span></a><span class="sd">            Set x to an acceptable value of the space</span>
 </span><span id="BoxSpace.clamp-190"><a href="#BoxSpace.clamp-190"><span class="linenos">190</span></a><span class="sd">            Args:</span>
 </span><span id="BoxSpace.clamp-191"><a href="#BoxSpace.clamp-191"><span class="linenos">191</span></a><span class="sd">                x: The value to set</span>
@@ -933,7 +933,7 @@ Returns:
     </div>
     <a class="headerlink" href="#BoxSpace.to_json"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BoxSpace.to_json-223"><a href="#BoxSpace.to_json-223"><span class="linenos">223</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]:</span>
-</span><span id="BoxSpace.to_json-224"><a href="#BoxSpace.to_json-224"><span class="linenos">224</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BoxSpace.to_json-224"><a href="#BoxSpace.to_json-224"><span class="linenos">224</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BoxSpace.to_json-225"><a href="#BoxSpace.to_json-225"><span class="linenos">225</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="BoxSpace.to_json-226"><a href="#BoxSpace.to_json-226"><span class="linenos">226</span></a>
 </span><span id="BoxSpace.to_json-227"><a href="#BoxSpace.to_json-227"><span class="linenos">227</span></a><span class="sd">            Returns:</span>

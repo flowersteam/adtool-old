@@ -86,7 +86,7 @@
 </span><span id="L-6"><a href="#L-6"><span class="linenos">  6</span></a>
 </span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a>
 </span><span id="L-8"><a href="#L-8"><span class="linenos">  8</span></a><span class="k">class</span> <span class="nc">DictSpace</span><span class="p">(</span><span class="n">BaseSpace</span><span class="p">):</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos"> 10</span></a><span class="sd">    A Dict dictionary of simpler spaces.</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos"> 11</span></a>
 </span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a><span class="sd">    Example usage:</span>
@@ -116,7 +116,7 @@
 </span><span id="L-36"><a href="#L-36"><span class="linenos"> 36</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-37"><a href="#L-37"><span class="linenos"> 37</span></a>
 </span><span id="L-38"><a href="#L-38"><span class="linenos"> 38</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spaces</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">spaces_kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a><span class="sd">            Init the elements useful to the space. Define spaces as dict of spaces</span>
 </span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a>
 </span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a><span class="sd">            Args:</span>
@@ -134,7 +134,7 @@
 </span><span id="L-54"><a href="#L-54"><span class="linenos"> 54</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>  <span class="c1"># None for shape and dtype, since it&#39;ll require special handling</span>
 </span><span id="L-55"><a href="#L-55"><span class="linenos"> 55</span></a>
 </span><span id="L-56"><a href="#L-56"><span class="linenos"> 56</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-57"><a href="#L-57"><span class="linenos"> 57</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-57"><a href="#L-57"><span class="linenos"> 57</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-58"><a href="#L-58"><span class="linenos"> 58</span></a><span class="sd">            Initialize all spaces in dict.</span>
 </span><span id="L-59"><a href="#L-59"><span class="linenos"> 59</span></a>
 </span><span id="L-60"><a href="#L-60"><span class="linenos"> 60</span></a><span class="sd">            Args:</span>
@@ -144,7 +144,7 @@
 </span><span id="L-64"><a href="#L-64"><span class="linenos"> 64</span></a>            <span class="n">space</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">parent_obj</span><span class="p">)</span>
 </span><span id="L-65"><a href="#L-65"><span class="linenos"> 65</span></a>
 </span><span id="L-66"><a href="#L-66"><span class="linenos"> 66</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">]:</span>
-</span><span id="L-67"><a href="#L-67"><span class="linenos"> 67</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-67"><a href="#L-67"><span class="linenos"> 67</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-68"><a href="#L-68"><span class="linenos"> 68</span></a><span class="sd">        Generates sample for each spaces according to the space</span>
 </span><span id="L-69"><a href="#L-69"><span class="linenos"> 69</span></a>
 </span><span id="L-70"><a href="#L-70"><span class="linenos"> 70</span></a><span class="sd">        Return:</span>
@@ -153,7 +153,7 @@
 </span><span id="L-73"><a href="#L-73"><span class="linenos"> 73</span></a>        <span class="k">return</span> <span class="n">Dict</span><span class="p">([(</span><span class="n">k</span><span class="p">,</span> <span class="n">space</span><span class="o">.</span><span class="n">sample</span><span class="p">())</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">space</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
 </span><span id="L-74"><a href="#L-74"><span class="linenos"> 74</span></a>
 </span><span id="L-75"><a href="#L-75"><span class="linenos"> 75</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="L-76"><a href="#L-76"><span class="linenos"> 76</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-76"><a href="#L-76"><span class="linenos"> 76</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-77"><a href="#L-77"><span class="linenos"> 77</span></a><span class="sd">        Apply the mutation for each spaces according to the space</span>
 </span><span id="L-78"><a href="#L-78"><span class="linenos"> 78</span></a>
 </span><span id="L-79"><a href="#L-79"><span class="linenos"> 79</span></a><span class="sd">        Return:</span>
@@ -162,7 +162,7 @@
 </span><span id="L-82"><a href="#L-82"><span class="linenos"> 82</span></a>        <span class="k">return</span> <span class="n">Dict</span><span class="p">([(</span><span class="n">k</span><span class="p">,</span> <span class="n">space</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">space</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
 </span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a>
 </span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a><span class="sd">            Check if each value is correctly set in its space</span>
 </span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a><span class="sd">            Args:</span>
 </span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a><span class="sd">                x: The dict of spaces</span>
@@ -179,7 +179,7 @@
 </span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a>        <span class="k">return</span> <span class="kc">True</span>
 </span><span id="L-100"><a href="#L-100"><span class="linenos">100</span></a>
 </span><span id="L-101"><a href="#L-101"><span class="linenos">101</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="L-102"><a href="#L-102"><span class="linenos">102</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-102"><a href="#L-102"><span class="linenos">102</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-103"><a href="#L-103"><span class="linenos">103</span></a><span class="sd">            For each element in dict set it to an acceptable value of the space</span>
 </span><span id="L-104"><a href="#L-104"><span class="linenos">104</span></a><span class="sd">            Args:</span>
 </span><span id="L-105"><a href="#L-105"><span class="linenos">105</span></a><span class="sd">                x: The dict of value value to set</span>
@@ -211,7 +211,7 @@
 </span><span id="L-131"><a href="#L-131"><span class="linenos">131</span></a>        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">)</span>
 </span><span id="L-132"><a href="#L-132"><span class="linenos">132</span></a>
 </span><span id="L-133"><a href="#L-133"><span class="linenos">133</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="L-134"><a href="#L-134"><span class="linenos">134</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-134"><a href="#L-134"><span class="linenos">134</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-135"><a href="#L-135"><span class="linenos">135</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="L-136"><a href="#L-136"><span class="linenos">136</span></a>
 </span><span id="L-137"><a href="#L-137"><span class="linenos">137</span></a><span class="sd">            Returns:</span>
@@ -237,7 +237,7 @@
     </div>
     <a class="headerlink" href="#DictSpace"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DictSpace-9"><a href="#DictSpace-9"><span class="linenos">  9</span></a><span class="k">class</span> <span class="nc">DictSpace</span><span class="p">(</span><span class="n">BaseSpace</span><span class="p">):</span>
-</span><span id="DictSpace-10"><a href="#DictSpace-10"><span class="linenos"> 10</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace-10"><a href="#DictSpace-10"><span class="linenos"> 10</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace-11"><a href="#DictSpace-11"><span class="linenos"> 11</span></a><span class="sd">    A Dict dictionary of simpler spaces.</span>
 </span><span id="DictSpace-12"><a href="#DictSpace-12"><span class="linenos"> 12</span></a>
 </span><span id="DictSpace-13"><a href="#DictSpace-13"><span class="linenos"> 13</span></a><span class="sd">    Example usage:</span>
@@ -267,7 +267,7 @@
 </span><span id="DictSpace-37"><a href="#DictSpace-37"><span class="linenos"> 37</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="DictSpace-38"><a href="#DictSpace-38"><span class="linenos"> 38</span></a>
 </span><span id="DictSpace-39"><a href="#DictSpace-39"><span class="linenos"> 39</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spaces</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">spaces_kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DictSpace-40"><a href="#DictSpace-40"><span class="linenos"> 40</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace-40"><a href="#DictSpace-40"><span class="linenos"> 40</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace-41"><a href="#DictSpace-41"><span class="linenos"> 41</span></a><span class="sd">            Init the elements useful to the space. Define spaces as dict of spaces</span>
 </span><span id="DictSpace-42"><a href="#DictSpace-42"><span class="linenos"> 42</span></a>
 </span><span id="DictSpace-43"><a href="#DictSpace-43"><span class="linenos"> 43</span></a><span class="sd">            Args:</span>
@@ -285,7 +285,7 @@
 </span><span id="DictSpace-55"><a href="#DictSpace-55"><span class="linenos"> 55</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>  <span class="c1"># None for shape and dtype, since it&#39;ll require special handling</span>
 </span><span id="DictSpace-56"><a href="#DictSpace-56"><span class="linenos"> 56</span></a>
 </span><span id="DictSpace-57"><a href="#DictSpace-57"><span class="linenos"> 57</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DictSpace-58"><a href="#DictSpace-58"><span class="linenos"> 58</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace-58"><a href="#DictSpace-58"><span class="linenos"> 58</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace-59"><a href="#DictSpace-59"><span class="linenos"> 59</span></a><span class="sd">            Initialize all spaces in dict.</span>
 </span><span id="DictSpace-60"><a href="#DictSpace-60"><span class="linenos"> 60</span></a>
 </span><span id="DictSpace-61"><a href="#DictSpace-61"><span class="linenos"> 61</span></a><span class="sd">            Args:</span>
@@ -295,7 +295,7 @@
 </span><span id="DictSpace-65"><a href="#DictSpace-65"><span class="linenos"> 65</span></a>            <span class="n">space</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">parent_obj</span><span class="p">)</span>
 </span><span id="DictSpace-66"><a href="#DictSpace-66"><span class="linenos"> 66</span></a>
 </span><span id="DictSpace-67"><a href="#DictSpace-67"><span class="linenos"> 67</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">]:</span>
-</span><span id="DictSpace-68"><a href="#DictSpace-68"><span class="linenos"> 68</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace-68"><a href="#DictSpace-68"><span class="linenos"> 68</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace-69"><a href="#DictSpace-69"><span class="linenos"> 69</span></a><span class="sd">        Generates sample for each spaces according to the space</span>
 </span><span id="DictSpace-70"><a href="#DictSpace-70"><span class="linenos"> 70</span></a>
 </span><span id="DictSpace-71"><a href="#DictSpace-71"><span class="linenos"> 71</span></a><span class="sd">        Return:</span>
@@ -304,7 +304,7 @@
 </span><span id="DictSpace-74"><a href="#DictSpace-74"><span class="linenos"> 74</span></a>        <span class="k">return</span> <span class="n">Dict</span><span class="p">([(</span><span class="n">k</span><span class="p">,</span> <span class="n">space</span><span class="o">.</span><span class="n">sample</span><span class="p">())</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">space</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
 </span><span id="DictSpace-75"><a href="#DictSpace-75"><span class="linenos"> 75</span></a>
 </span><span id="DictSpace-76"><a href="#DictSpace-76"><span class="linenos"> 76</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="DictSpace-77"><a href="#DictSpace-77"><span class="linenos"> 77</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace-77"><a href="#DictSpace-77"><span class="linenos"> 77</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace-78"><a href="#DictSpace-78"><span class="linenos"> 78</span></a><span class="sd">        Apply the mutation for each spaces according to the space</span>
 </span><span id="DictSpace-79"><a href="#DictSpace-79"><span class="linenos"> 79</span></a>
 </span><span id="DictSpace-80"><a href="#DictSpace-80"><span class="linenos"> 80</span></a><span class="sd">        Return:</span>
@@ -313,7 +313,7 @@
 </span><span id="DictSpace-83"><a href="#DictSpace-83"><span class="linenos"> 83</span></a>        <span class="k">return</span> <span class="n">Dict</span><span class="p">([(</span><span class="n">k</span><span class="p">,</span> <span class="n">space</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">space</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
 </span><span id="DictSpace-84"><a href="#DictSpace-84"><span class="linenos"> 84</span></a>
 </span><span id="DictSpace-85"><a href="#DictSpace-85"><span class="linenos"> 85</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="DictSpace-86"><a href="#DictSpace-86"><span class="linenos"> 86</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace-86"><a href="#DictSpace-86"><span class="linenos"> 86</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace-87"><a href="#DictSpace-87"><span class="linenos"> 87</span></a><span class="sd">            Check if each value is correctly set in its space</span>
 </span><span id="DictSpace-88"><a href="#DictSpace-88"><span class="linenos"> 88</span></a><span class="sd">            Args:</span>
 </span><span id="DictSpace-89"><a href="#DictSpace-89"><span class="linenos"> 89</span></a><span class="sd">                x: The dict of spaces</span>
@@ -330,7 +330,7 @@
 </span><span id="DictSpace-100"><a href="#DictSpace-100"><span class="linenos">100</span></a>        <span class="k">return</span> <span class="kc">True</span>
 </span><span id="DictSpace-101"><a href="#DictSpace-101"><span class="linenos">101</span></a>
 </span><span id="DictSpace-102"><a href="#DictSpace-102"><span class="linenos">102</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="DictSpace-103"><a href="#DictSpace-103"><span class="linenos">103</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace-103"><a href="#DictSpace-103"><span class="linenos">103</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace-104"><a href="#DictSpace-104"><span class="linenos">104</span></a><span class="sd">            For each element in dict set it to an acceptable value of the space</span>
 </span><span id="DictSpace-105"><a href="#DictSpace-105"><span class="linenos">105</span></a><span class="sd">            Args:</span>
 </span><span id="DictSpace-106"><a href="#DictSpace-106"><span class="linenos">106</span></a><span class="sd">                x: The dict of value value to set</span>
@@ -362,7 +362,7 @@
 </span><span id="DictSpace-132"><a href="#DictSpace-132"><span class="linenos">132</span></a>        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spaces</span><span class="p">)</span>
 </span><span id="DictSpace-133"><a href="#DictSpace-133"><span class="linenos">133</span></a>
 </span><span id="DictSpace-134"><a href="#DictSpace-134"><span class="linenos">134</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="DictSpace-135"><a href="#DictSpace-135"><span class="linenos">135</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace-135"><a href="#DictSpace-135"><span class="linenos">135</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace-136"><a href="#DictSpace-136"><span class="linenos">136</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="DictSpace-137"><a href="#DictSpace-137"><span class="linenos">137</span></a>
 </span><span id="DictSpace-138"><a href="#DictSpace-138"><span class="linenos">138</span></a><span class="sd">            Returns:</span>
@@ -415,7 +415,7 @@ self.nested_genome_space = spaces.DictSpace({
     </div>
     <a class="headerlink" href="#DictSpace.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DictSpace.__init__-39"><a href="#DictSpace.__init__-39"><span class="linenos">39</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spaces</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">spaces_kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DictSpace.__init__-40"><a href="#DictSpace.__init__-40"><span class="linenos">40</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace.__init__-40"><a href="#DictSpace.__init__-40"><span class="linenos">40</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace.__init__-41"><a href="#DictSpace.__init__-41"><span class="linenos">41</span></a><span class="sd">            Init the elements useful to the space. Define spaces as dict of spaces</span>
 </span><span id="DictSpace.__init__-42"><a href="#DictSpace.__init__-42"><span class="linenos">42</span></a>
 </span><span id="DictSpace.__init__-43"><a href="#DictSpace.__init__-43"><span class="linenos">43</span></a><span class="sd">            Args:</span>
@@ -454,7 +454,7 @@ self.nested_genome_space = spaces.DictSpace({
     </div>
     <a class="headerlink" href="#DictSpace.initialize"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DictSpace.initialize-57"><a href="#DictSpace.initialize-57"><span class="linenos">57</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DictSpace.initialize-58"><a href="#DictSpace.initialize-58"><span class="linenos">58</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace.initialize-58"><a href="#DictSpace.initialize-58"><span class="linenos">58</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace.initialize-59"><a href="#DictSpace.initialize-59"><span class="linenos">59</span></a><span class="sd">            Initialize all spaces in dict.</span>
 </span><span id="DictSpace.initialize-60"><a href="#DictSpace.initialize-60"><span class="linenos">60</span></a>
 </span><span id="DictSpace.initialize-61"><a href="#DictSpace.initialize-61"><span class="linenos">61</span></a><span class="sd">            Args:</span>
@@ -478,14 +478,14 @@ self.nested_genome_space = spaces.DictSpace({
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">sample</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="bp">self</span></span><span class="return-annotation">) -> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">method</span> <span class="n">tensor</span> <span class="n">of</span> <span class="nb">type</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7f53d572b5a0</span><span class="o">&gt;</span><span class="p">]</span>:</span></span>
+        <span class="name">sample</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="bp">self</span></span><span class="return-annotation">) -> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">method</span> <span class="n">tensor</span> <span class="n">of</span> <span class="nb">type</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7faec63bc5a0</span><span class="o">&gt;</span><span class="p">]</span>:</span></span>
 
                 <label class="view-source-button" for="DictSpace.sample-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#DictSpace.sample"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DictSpace.sample-67"><a href="#DictSpace.sample-67"><span class="linenos">67</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">]:</span>
-</span><span id="DictSpace.sample-68"><a href="#DictSpace.sample-68"><span class="linenos">68</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace.sample-68"><a href="#DictSpace.sample-68"><span class="linenos">68</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace.sample-69"><a href="#DictSpace.sample-69"><span class="linenos">69</span></a><span class="sd">        Generates sample for each spaces according to the space</span>
 </span><span id="DictSpace.sample-70"><a href="#DictSpace.sample-70"><span class="linenos">70</span></a>
 </span><span id="DictSpace.sample-71"><a href="#DictSpace.sample-71"><span class="linenos">71</span></a><span class="sd">        Return:</span>
@@ -515,7 +515,7 @@ self.nested_genome_space = spaces.DictSpace({
     </div>
     <a class="headerlink" href="#DictSpace.mutate"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DictSpace.mutate-76"><a href="#DictSpace.mutate-76"><span class="linenos">76</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="DictSpace.mutate-77"><a href="#DictSpace.mutate-77"><span class="linenos">77</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace.mutate-77"><a href="#DictSpace.mutate-77"><span class="linenos">77</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace.mutate-78"><a href="#DictSpace.mutate-78"><span class="linenos">78</span></a><span class="sd">        Apply the mutation for each spaces according to the space</span>
 </span><span id="DictSpace.mutate-79"><a href="#DictSpace.mutate-79"><span class="linenos">79</span></a>
 </span><span id="DictSpace.mutate-80"><a href="#DictSpace.mutate-80"><span class="linenos">80</span></a><span class="sd">        Return:</span>
@@ -545,7 +545,7 @@ self.nested_genome_space = spaces.DictSpace({
     </div>
     <a class="headerlink" href="#DictSpace.contains"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DictSpace.contains-85"><a href="#DictSpace.contains-85"><span class="linenos"> 85</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="DictSpace.contains-86"><a href="#DictSpace.contains-86"><span class="linenos"> 86</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace.contains-86"><a href="#DictSpace.contains-86"><span class="linenos"> 86</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace.contains-87"><a href="#DictSpace.contains-87"><span class="linenos"> 87</span></a><span class="sd">            Check if each value is correctly set in its space</span>
 </span><span id="DictSpace.contains-88"><a href="#DictSpace.contains-88"><span class="linenos"> 88</span></a><span class="sd">            Args:</span>
 </span><span id="DictSpace.contains-89"><a href="#DictSpace.contains-89"><span class="linenos"> 89</span></a><span class="sd">                x: The dict of spaces</span>
@@ -584,7 +584,7 @@ Returns:
     </div>
     <a class="headerlink" href="#DictSpace.clamp"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DictSpace.clamp-102"><a href="#DictSpace.clamp-102"><span class="linenos">102</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="DictSpace.clamp-103"><a href="#DictSpace.clamp-103"><span class="linenos">103</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace.clamp-103"><a href="#DictSpace.clamp-103"><span class="linenos">103</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace.clamp-104"><a href="#DictSpace.clamp-104"><span class="linenos">104</span></a><span class="sd">            For each element in dict set it to an acceptable value of the space</span>
 </span><span id="DictSpace.clamp-105"><a href="#DictSpace.clamp-105"><span class="linenos">105</span></a><span class="sd">            Args:</span>
 </span><span id="DictSpace.clamp-106"><a href="#DictSpace.clamp-106"><span class="linenos">106</span></a><span class="sd">                x: The dict of value value to set</span>
@@ -616,7 +616,7 @@ Returns:
     </div>
     <a class="headerlink" href="#DictSpace.to_json"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DictSpace.to_json-134"><a href="#DictSpace.to_json-134"><span class="linenos">134</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="DictSpace.to_json-135"><a href="#DictSpace.to_json-135"><span class="linenos">135</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DictSpace.to_json-135"><a href="#DictSpace.to_json-135"><span class="linenos">135</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DictSpace.to_json-136"><a href="#DictSpace.to_json-136"><span class="linenos">136</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="DictSpace.to_json-137"><a href="#DictSpace.to_json-137"><span class="linenos">137</span></a>
 </span><span id="DictSpace.to_json-138"><a href="#DictSpace.to_json-138"><span class="linenos">138</span></a><span class="sd">            Returns:</span>

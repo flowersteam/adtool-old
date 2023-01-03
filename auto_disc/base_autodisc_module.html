@@ -81,7 +81,7 @@
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
 </span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a>
 </span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="k">class</span> <span class="nc">BaseAutoDiscModule</span><span class="p">:</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="sd">    Base class of all modules usable in auto_disc.</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="sd">    &#39;&#39;&#39;</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>    <span class="n">_access_history</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Function to access (readonly) history of (input, output) pairs. Takes 1 positional argument which could be an index or a slice.</span>
@@ -90,12 +90,12 @@
 </span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a>    <span class="c1"># Function to ask history of run_parameters to be updated (use this if some input_wrappers changed)</span>
 </span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>    <span class="n">_call_run_parameters_history_update</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>    <span class="n">CURRENT_RUN_INDEX</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="sd">    Integer tracking index of current loop iteration</span>
 </span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a>
 </span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="p">:</span> <span class="n">AutoDiscLogger</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="sd">            Initialize attributes common to all auto_disc modules</span>
 </span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a>
 </span><span id="L-24"><a href="#L-24"><span class="linenos">24</span></a><span class="sd">            #### Args:</span>
@@ -104,7 +104,7 @@
 </span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
 </span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a>
 </span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a>    <span class="k">def</span> <span class="nf">set_history_access_fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a><span class="sd">            Set the function allowing module to access (readonly) its history of (input, output) pairs.</span>
 </span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a>
 </span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a><span class="sd">            #### Args:</span>
@@ -113,7 +113,7 @@
 </span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_access_history</span> <span class="o">=</span> <span class="n">function</span>
 </span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a>
 </span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a>    <span class="k">def</span> <span class="nf">set_call_output_history_update_fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a><span class="sd">            Set the function asking a refresh (raw_outputs will be processed again with output representations) of all outputs in history.</span>
 </span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a>
 </span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a><span class="sd">            #### Args:</span>
@@ -128,7 +128,7 @@
 </span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a>    <span class="c1">#     self._call_run_parameters_history_update = function</span>
 </span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a>
 </span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a><span class="sd">            Return a dict storing everything that has to be pickled.</span>
 </span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a>
 </span><span id="L-57"><a href="#L-57"><span class="linenos">57</span></a><span class="sd">            **NOTE: Saving/loading is currently highly unstable, and the interface will be deprecated</span>
@@ -137,7 +137,7 @@
 </span><span id="L-60"><a href="#L-60"><span class="linenos">60</span></a>        <span class="k">return</span> <span class="p">{}</span>
 </span><span id="L-61"><a href="#L-61"><span class="linenos">61</span></a>
 </span><span id="L-62"><a href="#L-62"><span class="linenos">62</span></a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saved_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
-</span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-63"><a href="#L-63"><span class="linenos">63</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-64"><a href="#L-64"><span class="linenos">64</span></a><span class="sd">            Reload module given a dict storing everything that had to be pickled.</span>
 </span><span id="L-65"><a href="#L-65"><span class="linenos">65</span></a>
 </span><span id="L-66"><a href="#L-66"><span class="linenos">66</span></a><span class="sd">            **NOTE: Saving/loading is currently highly unstable, and the interface will be deprecated</span>
@@ -163,7 +163,7 @@
     </div>
     <a class="headerlink" href="#BaseAutoDiscModule"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseAutoDiscModule-7"><a href="#BaseAutoDiscModule-7"><span class="linenos"> 7</span></a><span class="k">class</span> <span class="nc">BaseAutoDiscModule</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule-8"><a href="#BaseAutoDiscModule-8"><span class="linenos"> 8</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule-8"><a href="#BaseAutoDiscModule-8"><span class="linenos"> 8</span></a><span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule-9"><a href="#BaseAutoDiscModule-9"><span class="linenos"> 9</span></a><span class="sd">    Base class of all modules usable in auto_disc.</span>
 </span><span id="BaseAutoDiscModule-10"><a href="#BaseAutoDiscModule-10"><span class="linenos">10</span></a><span class="sd">    &#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule-11"><a href="#BaseAutoDiscModule-11"><span class="linenos">11</span></a>    <span class="n">_access_history</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Function to access (readonly) history of (input, output) pairs. Takes 1 positional argument which could be an index or a slice.</span>
@@ -172,12 +172,12 @@
 </span><span id="BaseAutoDiscModule-14"><a href="#BaseAutoDiscModule-14"><span class="linenos">14</span></a>    <span class="c1"># Function to ask history of run_parameters to be updated (use this if some input_wrappers changed)</span>
 </span><span id="BaseAutoDiscModule-15"><a href="#BaseAutoDiscModule-15"><span class="linenos">15</span></a>    <span class="n">_call_run_parameters_history_update</span> <span class="o">=</span> <span class="kc">None</span>
 </span><span id="BaseAutoDiscModule-16"><a href="#BaseAutoDiscModule-16"><span class="linenos">16</span></a>    <span class="n">CURRENT_RUN_INDEX</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="BaseAutoDiscModule-17"><a href="#BaseAutoDiscModule-17"><span class="linenos">17</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseAutoDiscModule-17"><a href="#BaseAutoDiscModule-17"><span class="linenos">17</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseAutoDiscModule-18"><a href="#BaseAutoDiscModule-18"><span class="linenos">18</span></a><span class="sd">    Integer tracking index of current loop iteration</span>
 </span><span id="BaseAutoDiscModule-19"><a href="#BaseAutoDiscModule-19"><span class="linenos">19</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="BaseAutoDiscModule-20"><a href="#BaseAutoDiscModule-20"><span class="linenos">20</span></a>
 </span><span id="BaseAutoDiscModule-21"><a href="#BaseAutoDiscModule-21"><span class="linenos">21</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="p">:</span> <span class="n">AutoDiscLogger</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule-22"><a href="#BaseAutoDiscModule-22"><span class="linenos">22</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseAutoDiscModule-22"><a href="#BaseAutoDiscModule-22"><span class="linenos">22</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseAutoDiscModule-23"><a href="#BaseAutoDiscModule-23"><span class="linenos">23</span></a><span class="sd">            Initialize attributes common to all auto_disc modules</span>
 </span><span id="BaseAutoDiscModule-24"><a href="#BaseAutoDiscModule-24"><span class="linenos">24</span></a>
 </span><span id="BaseAutoDiscModule-25"><a href="#BaseAutoDiscModule-25"><span class="linenos">25</span></a><span class="sd">            #### Args:</span>
@@ -186,7 +186,7 @@
 </span><span id="BaseAutoDiscModule-28"><a href="#BaseAutoDiscModule-28"><span class="linenos">28</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logger</span>
 </span><span id="BaseAutoDiscModule-29"><a href="#BaseAutoDiscModule-29"><span class="linenos">29</span></a>
 </span><span id="BaseAutoDiscModule-30"><a href="#BaseAutoDiscModule-30"><span class="linenos">30</span></a>    <span class="k">def</span> <span class="nf">set_history_access_fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule-31"><a href="#BaseAutoDiscModule-31"><span class="linenos">31</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule-31"><a href="#BaseAutoDiscModule-31"><span class="linenos">31</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule-32"><a href="#BaseAutoDiscModule-32"><span class="linenos">32</span></a><span class="sd">            Set the function allowing module to access (readonly) its history of (input, output) pairs.</span>
 </span><span id="BaseAutoDiscModule-33"><a href="#BaseAutoDiscModule-33"><span class="linenos">33</span></a>
 </span><span id="BaseAutoDiscModule-34"><a href="#BaseAutoDiscModule-34"><span class="linenos">34</span></a><span class="sd">            #### Args:</span>
@@ -195,7 +195,7 @@
 </span><span id="BaseAutoDiscModule-37"><a href="#BaseAutoDiscModule-37"><span class="linenos">37</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_access_history</span> <span class="o">=</span> <span class="n">function</span>
 </span><span id="BaseAutoDiscModule-38"><a href="#BaseAutoDiscModule-38"><span class="linenos">38</span></a>
 </span><span id="BaseAutoDiscModule-39"><a href="#BaseAutoDiscModule-39"><span class="linenos">39</span></a>    <span class="k">def</span> <span class="nf">set_call_output_history_update_fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule-40"><a href="#BaseAutoDiscModule-40"><span class="linenos">40</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule-40"><a href="#BaseAutoDiscModule-40"><span class="linenos">40</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule-41"><a href="#BaseAutoDiscModule-41"><span class="linenos">41</span></a><span class="sd">            Set the function asking a refresh (raw_outputs will be processed again with output representations) of all outputs in history.</span>
 </span><span id="BaseAutoDiscModule-42"><a href="#BaseAutoDiscModule-42"><span class="linenos">42</span></a>
 </span><span id="BaseAutoDiscModule-43"><a href="#BaseAutoDiscModule-43"><span class="linenos">43</span></a><span class="sd">            #### Args:</span>
@@ -210,7 +210,7 @@
 </span><span id="BaseAutoDiscModule-52"><a href="#BaseAutoDiscModule-52"><span class="linenos">52</span></a>    <span class="c1">#     self._call_run_parameters_history_update = function</span>
 </span><span id="BaseAutoDiscModule-53"><a href="#BaseAutoDiscModule-53"><span class="linenos">53</span></a>
 </span><span id="BaseAutoDiscModule-54"><a href="#BaseAutoDiscModule-54"><span class="linenos">54</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule-55"><a href="#BaseAutoDiscModule-55"><span class="linenos">55</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule-55"><a href="#BaseAutoDiscModule-55"><span class="linenos">55</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule-56"><a href="#BaseAutoDiscModule-56"><span class="linenos">56</span></a><span class="sd">            Return a dict storing everything that has to be pickled.</span>
 </span><span id="BaseAutoDiscModule-57"><a href="#BaseAutoDiscModule-57"><span class="linenos">57</span></a>
 </span><span id="BaseAutoDiscModule-58"><a href="#BaseAutoDiscModule-58"><span class="linenos">58</span></a><span class="sd">            **NOTE: Saving/loading is currently highly unstable, and the interface will be deprecated</span>
@@ -219,7 +219,7 @@
 </span><span id="BaseAutoDiscModule-61"><a href="#BaseAutoDiscModule-61"><span class="linenos">61</span></a>        <span class="k">return</span> <span class="p">{}</span>
 </span><span id="BaseAutoDiscModule-62"><a href="#BaseAutoDiscModule-62"><span class="linenos">62</span></a>
 </span><span id="BaseAutoDiscModule-63"><a href="#BaseAutoDiscModule-63"><span class="linenos">63</span></a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saved_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
-</span><span id="BaseAutoDiscModule-64"><a href="#BaseAutoDiscModule-64"><span class="linenos">64</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule-64"><a href="#BaseAutoDiscModule-64"><span class="linenos">64</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule-65"><a href="#BaseAutoDiscModule-65"><span class="linenos">65</span></a><span class="sd">            Reload module given a dict storing everything that had to be pickled.</span>
 </span><span id="BaseAutoDiscModule-66"><a href="#BaseAutoDiscModule-66"><span class="linenos">66</span></a>
 </span><span id="BaseAutoDiscModule-67"><a href="#BaseAutoDiscModule-67"><span class="linenos">67</span></a><span class="sd">            **NOTE: Saving/loading is currently highly unstable, and the interface will be deprecated</span>
@@ -247,7 +247,7 @@
     </div>
     <a class="headerlink" href="#BaseAutoDiscModule.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseAutoDiscModule.__init__-21"><a href="#BaseAutoDiscModule.__init__-21"><span class="linenos">21</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logger</span><span class="p">:</span> <span class="n">AutoDiscLogger</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule.__init__-22"><a href="#BaseAutoDiscModule.__init__-22"><span class="linenos">22</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseAutoDiscModule.__init__-22"><a href="#BaseAutoDiscModule.__init__-22"><span class="linenos">22</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseAutoDiscModule.__init__-23"><a href="#BaseAutoDiscModule.__init__-23"><span class="linenos">23</span></a><span class="sd">            Initialize attributes common to all auto_disc modules</span>
 </span><span id="BaseAutoDiscModule.__init__-24"><a href="#BaseAutoDiscModule.__init__-24"><span class="linenos">24</span></a>
 </span><span id="BaseAutoDiscModule.__init__-25"><a href="#BaseAutoDiscModule.__init__-25"><span class="linenos">25</span></a><span class="sd">            #### Args:</span>
@@ -293,7 +293,7 @@
     </div>
     <a class="headerlink" href="#BaseAutoDiscModule.set_history_access_fn"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseAutoDiscModule.set_history_access_fn-30"><a href="#BaseAutoDiscModule.set_history_access_fn-30"><span class="linenos">30</span></a>    <span class="k">def</span> <span class="nf">set_history_access_fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule.set_history_access_fn-31"><a href="#BaseAutoDiscModule.set_history_access_fn-31"><span class="linenos">31</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule.set_history_access_fn-31"><a href="#BaseAutoDiscModule.set_history_access_fn-31"><span class="linenos">31</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule.set_history_access_fn-32"><a href="#BaseAutoDiscModule.set_history_access_fn-32"><span class="linenos">32</span></a><span class="sd">            Set the function allowing module to access (readonly) its history of (input, output) pairs.</span>
 </span><span id="BaseAutoDiscModule.set_history_access_fn-33"><a href="#BaseAutoDiscModule.set_history_access_fn-33"><span class="linenos">33</span></a>
 </span><span id="BaseAutoDiscModule.set_history_access_fn-34"><a href="#BaseAutoDiscModule.set_history_access_fn-34"><span class="linenos">34</span></a><span class="sd">            #### Args:</span>
@@ -326,7 +326,7 @@
     </div>
     <a class="headerlink" href="#BaseAutoDiscModule.set_call_output_history_update_fn"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseAutoDiscModule.set_call_output_history_update_fn-39"><a href="#BaseAutoDiscModule.set_call_output_history_update_fn-39"><span class="linenos">39</span></a>    <span class="k">def</span> <span class="nf">set_call_output_history_update_fn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule.set_call_output_history_update_fn-40"><a href="#BaseAutoDiscModule.set_call_output_history_update_fn-40"><span class="linenos">40</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule.set_call_output_history_update_fn-40"><a href="#BaseAutoDiscModule.set_call_output_history_update_fn-40"><span class="linenos">40</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule.set_call_output_history_update_fn-41"><a href="#BaseAutoDiscModule.set_call_output_history_update_fn-41"><span class="linenos">41</span></a><span class="sd">            Set the function asking a refresh (raw_outputs will be processed again with output representations) of all outputs in history.</span>
 </span><span id="BaseAutoDiscModule.set_call_output_history_update_fn-42"><a href="#BaseAutoDiscModule.set_call_output_history_update_fn-42"><span class="linenos">42</span></a>
 </span><span id="BaseAutoDiscModule.set_call_output_history_update_fn-43"><a href="#BaseAutoDiscModule.set_call_output_history_update_fn-43"><span class="linenos">43</span></a><span class="sd">            #### Args:</span>
@@ -359,7 +359,7 @@
     </div>
     <a class="headerlink" href="#BaseAutoDiscModule.save"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseAutoDiscModule.save-54"><a href="#BaseAutoDiscModule.save-54"><span class="linenos">54</span></a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="BaseAutoDiscModule.save-55"><a href="#BaseAutoDiscModule.save-55"><span class="linenos">55</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule.save-55"><a href="#BaseAutoDiscModule.save-55"><span class="linenos">55</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule.save-56"><a href="#BaseAutoDiscModule.save-56"><span class="linenos">56</span></a><span class="sd">            Return a dict storing everything that has to be pickled.</span>
 </span><span id="BaseAutoDiscModule.save-57"><a href="#BaseAutoDiscModule.save-57"><span class="linenos">57</span></a>
 </span><span id="BaseAutoDiscModule.save-58"><a href="#BaseAutoDiscModule.save-58"><span class="linenos">58</span></a><span class="sd">            **NOTE: Saving/loading is currently highly unstable, and the interface will be deprecated</span>
@@ -389,7 +389,7 @@ soon during an API update.</strong></p>
     </div>
     <a class="headerlink" href="#BaseAutoDiscModule.load"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseAutoDiscModule.load-63"><a href="#BaseAutoDiscModule.load-63"><span class="linenos">63</span></a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saved_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
-</span><span id="BaseAutoDiscModule.load-64"><a href="#BaseAutoDiscModule.load-64"><span class="linenos">64</span></a>        <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="BaseAutoDiscModule.load-64"><a href="#BaseAutoDiscModule.load-64"><span class="linenos">64</span></a><span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 </span><span id="BaseAutoDiscModule.load-65"><a href="#BaseAutoDiscModule.load-65"><span class="linenos">65</span></a><span class="sd">            Reload module given a dict storing everything that had to be pickled.</span>
 </span><span id="BaseAutoDiscModule.load-66"><a href="#BaseAutoDiscModule.load-66"><span class="linenos">66</span></a>
 </span><span id="BaseAutoDiscModule.load-67"><a href="#BaseAutoDiscModule.load-67"><span class="linenos">67</span></a><span class="sd">            **NOTE: Saving/loading is currently highly unstable, and the interface will be deprecated</span>

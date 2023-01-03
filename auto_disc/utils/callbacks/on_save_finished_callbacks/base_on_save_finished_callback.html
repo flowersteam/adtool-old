@@ -64,18 +64,18 @@
 </span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a>
 </span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a>
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a><span class="k">class</span> <span class="nc">BaseOnSaveFinishedCallback</span><span class="p">(</span><span class="n">BaseCallback</span><span class="p">):</span>
-</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="sd">    Base class for on save finished callbacks used by the experiment pipelines when the experiment save autodisc modules.</span>
 </span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="sd">        initialize attributes common to all on save finished callbacks</span>
 </span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>
 </span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="sd">            The function to call to effectively raise on save finished callback.</span>
 </span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="sd">            Inform the user that the experiment save are over</span>
 </span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="sd">            #### Args:</span>
@@ -100,18 +100,18 @@
     </div>
     <a class="headerlink" href="#BaseOnSaveFinishedCallback"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseOnSaveFinishedCallback-5"><a href="#BaseOnSaveFinishedCallback-5"><span class="linenos"> 5</span></a><span class="k">class</span> <span class="nc">BaseOnSaveFinishedCallback</span><span class="p">(</span><span class="n">BaseCallback</span><span class="p">):</span>
-</span><span id="BaseOnSaveFinishedCallback-6"><a href="#BaseOnSaveFinishedCallback-6"><span class="linenos"> 6</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOnSaveFinishedCallback-6"><a href="#BaseOnSaveFinishedCallback-6"><span class="linenos"> 6</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOnSaveFinishedCallback-7"><a href="#BaseOnSaveFinishedCallback-7"><span class="linenos"> 7</span></a><span class="sd">    Base class for on save finished callbacks used by the experiment pipelines when the experiment save autodisc modules.</span>
 </span><span id="BaseOnSaveFinishedCallback-8"><a href="#BaseOnSaveFinishedCallback-8"><span class="linenos"> 8</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="BaseOnSaveFinishedCallback-9"><a href="#BaseOnSaveFinishedCallback-9"><span class="linenos"> 9</span></a>
 </span><span id="BaseOnSaveFinishedCallback-10"><a href="#BaseOnSaveFinishedCallback-10"><span class="linenos">10</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseOnSaveFinishedCallback-11"><a href="#BaseOnSaveFinishedCallback-11"><span class="linenos">11</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOnSaveFinishedCallback-11"><a href="#BaseOnSaveFinishedCallback-11"><span class="linenos">11</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOnSaveFinishedCallback-12"><a href="#BaseOnSaveFinishedCallback-12"><span class="linenos">12</span></a><span class="sd">        initialize attributes common to all on save finished callbacks</span>
 </span><span id="BaseOnSaveFinishedCallback-13"><a href="#BaseOnSaveFinishedCallback-13"><span class="linenos">13</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseOnSaveFinishedCallback-14"><a href="#BaseOnSaveFinishedCallback-14"><span class="linenos">14</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span><span id="BaseOnSaveFinishedCallback-15"><a href="#BaseOnSaveFinishedCallback-15"><span class="linenos">15</span></a>
 </span><span id="BaseOnSaveFinishedCallback-16"><a href="#BaseOnSaveFinishedCallback-16"><span class="linenos">16</span></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experiment_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseOnSaveFinishedCallback-17"><a href="#BaseOnSaveFinishedCallback-17"><span class="linenos">17</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOnSaveFinishedCallback-17"><a href="#BaseOnSaveFinishedCallback-17"><span class="linenos">17</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOnSaveFinishedCallback-18"><a href="#BaseOnSaveFinishedCallback-18"><span class="linenos">18</span></a><span class="sd">            The function to call to effectively raise on save finished callback.</span>
 </span><span id="BaseOnSaveFinishedCallback-19"><a href="#BaseOnSaveFinishedCallback-19"><span class="linenos">19</span></a><span class="sd">            Inform the user that the experiment save are over</span>
 </span><span id="BaseOnSaveFinishedCallback-20"><a href="#BaseOnSaveFinishedCallback-20"><span class="linenos">20</span></a><span class="sd">            #### Args:</span>
@@ -138,7 +138,7 @@
     </div>
     <a class="headerlink" href="#BaseOnSaveFinishedCallback.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseOnSaveFinishedCallback.__init__-10"><a href="#BaseOnSaveFinishedCallback.__init__-10"><span class="linenos">10</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseOnSaveFinishedCallback.__init__-11"><a href="#BaseOnSaveFinishedCallback.__init__-11"><span class="linenos">11</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseOnSaveFinishedCallback.__init__-11"><a href="#BaseOnSaveFinishedCallback.__init__-11"><span class="linenos">11</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseOnSaveFinishedCallback.__init__-12"><a href="#BaseOnSaveFinishedCallback.__init__-12"><span class="linenos">12</span></a><span class="sd">        initialize attributes common to all on save finished callbacks</span>
 </span><span id="BaseOnSaveFinishedCallback.__init__-13"><a href="#BaseOnSaveFinishedCallback.__init__-13"><span class="linenos">13</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseOnSaveFinishedCallback.__init__-14"><a href="#BaseOnSaveFinishedCallback.__init__-14"><span class="linenos">14</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>

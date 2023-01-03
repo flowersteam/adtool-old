@@ -68,7 +68,7 @@
 </span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a>
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
 </span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="k">class</span> <span class="nc">BaseConfigParameter</span><span class="p">():</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="sd">    Decorator to add a config parameter to a class.</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="sd">    #### Usage:</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="sd">    ```</span>
@@ -82,7 +82,7 @@
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>
 </span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="sd">            Init a config parameter</span>
 </span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a>
 </span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a><span class="sd">            #### Args:</span>
@@ -95,7 +95,7 @@
 </span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
 </span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a>
 </span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a>    <span class="k">def</span> <span class="nf">check_value_to_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a><span class="sd">            Check if the value is one of the possible values</span>
 </span><span id="L-35"><a href="#L-35"><span class="linenos">35</span></a>
 </span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a><span class="sd">            #### Args:</span>
@@ -107,7 +107,7 @@
 </span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a>        <span class="k">return</span> <span class="kc">True</span>
 </span><span id="L-43"><a href="#L-43"><span class="linenos">43</span></a>
 </span><span id="L-44"><a href="#L-44"><span class="linenos">44</span></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">original_class</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">type</span><span class="p">:</span>
-</span><span id="L-45"><a href="#L-45"><span class="linenos">45</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-45"><a href="#L-45"><span class="linenos">45</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a><span class="sd">            Define correctly an autodisc modules considering the (decorator) config parameter</span>
 </span><span id="L-47"><a href="#L-47"><span class="linenos">47</span></a>
 </span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a><span class="sd">            #### Args:</span>
@@ -162,7 +162,7 @@
     </div>
     <a class="headerlink" href="#BaseConfigParameter"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseConfigParameter-6"><a href="#BaseConfigParameter-6"><span class="linenos"> 6</span></a><span class="k">class</span> <span class="nc">BaseConfigParameter</span><span class="p">():</span>
-</span><span id="BaseConfigParameter-7"><a href="#BaseConfigParameter-7"><span class="linenos"> 7</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseConfigParameter-7"><a href="#BaseConfigParameter-7"><span class="linenos"> 7</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseConfigParameter-8"><a href="#BaseConfigParameter-8"><span class="linenos"> 8</span></a><span class="sd">    Decorator to add a config parameter to a class.</span>
 </span><span id="BaseConfigParameter-9"><a href="#BaseConfigParameter-9"><span class="linenos"> 9</span></a><span class="sd">    #### Usage:</span>
 </span><span id="BaseConfigParameter-10"><a href="#BaseConfigParameter-10"><span class="linenos">10</span></a><span class="sd">    ```</span>
@@ -176,7 +176,7 @@
 </span><span id="BaseConfigParameter-18"><a href="#BaseConfigParameter-18"><span class="linenos">18</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="BaseConfigParameter-19"><a href="#BaseConfigParameter-19"><span class="linenos">19</span></a>
 </span><span id="BaseConfigParameter-20"><a href="#BaseConfigParameter-20"><span class="linenos">20</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseConfigParameter-21"><a href="#BaseConfigParameter-21"><span class="linenos">21</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseConfigParameter-21"><a href="#BaseConfigParameter-21"><span class="linenos">21</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseConfigParameter-22"><a href="#BaseConfigParameter-22"><span class="linenos">22</span></a><span class="sd">            Init a config parameter</span>
 </span><span id="BaseConfigParameter-23"><a href="#BaseConfigParameter-23"><span class="linenos">23</span></a>
 </span><span id="BaseConfigParameter-24"><a href="#BaseConfigParameter-24"><span class="linenos">24</span></a><span class="sd">            #### Args:</span>
@@ -189,7 +189,7 @@
 </span><span id="BaseConfigParameter-31"><a href="#BaseConfigParameter-31"><span class="linenos">31</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
 </span><span id="BaseConfigParameter-32"><a href="#BaseConfigParameter-32"><span class="linenos">32</span></a>
 </span><span id="BaseConfigParameter-33"><a href="#BaseConfigParameter-33"><span class="linenos">33</span></a>    <span class="k">def</span> <span class="nf">check_value_to_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="BaseConfigParameter-34"><a href="#BaseConfigParameter-34"><span class="linenos">34</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseConfigParameter-34"><a href="#BaseConfigParameter-34"><span class="linenos">34</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseConfigParameter-35"><a href="#BaseConfigParameter-35"><span class="linenos">35</span></a><span class="sd">            Check if the value is one of the possible values</span>
 </span><span id="BaseConfigParameter-36"><a href="#BaseConfigParameter-36"><span class="linenos">36</span></a>
 </span><span id="BaseConfigParameter-37"><a href="#BaseConfigParameter-37"><span class="linenos">37</span></a><span class="sd">            #### Args:</span>
@@ -201,7 +201,7 @@
 </span><span id="BaseConfigParameter-43"><a href="#BaseConfigParameter-43"><span class="linenos">43</span></a>        <span class="k">return</span> <span class="kc">True</span>
 </span><span id="BaseConfigParameter-44"><a href="#BaseConfigParameter-44"><span class="linenos">44</span></a>
 </span><span id="BaseConfigParameter-45"><a href="#BaseConfigParameter-45"><span class="linenos">45</span></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">original_class</span><span class="p">:</span> <span class="nb">type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">type</span><span class="p">:</span>
-</span><span id="BaseConfigParameter-46"><a href="#BaseConfigParameter-46"><span class="linenos">46</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseConfigParameter-46"><a href="#BaseConfigParameter-46"><span class="linenos">46</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseConfigParameter-47"><a href="#BaseConfigParameter-47"><span class="linenos">47</span></a><span class="sd">            Define correctly an autodisc modules considering the (decorator) config parameter</span>
 </span><span id="BaseConfigParameter-48"><a href="#BaseConfigParameter-48"><span class="linenos">48</span></a>
 </span><span id="BaseConfigParameter-49"><a href="#BaseConfigParameter-49"><span class="linenos">49</span></a><span class="sd">            #### Args:</span>
@@ -268,7 +268,7 @@ class A():
     </div>
     <a class="headerlink" href="#BaseConfigParameter.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseConfigParameter.__init__-20"><a href="#BaseConfigParameter.__init__-20"><span class="linenos">20</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseConfigParameter.__init__-21"><a href="#BaseConfigParameter.__init__-21"><span class="linenos">21</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseConfigParameter.__init__-21"><a href="#BaseConfigParameter.__init__-21"><span class="linenos">21</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseConfigParameter.__init__-22"><a href="#BaseConfigParameter.__init__-22"><span class="linenos">22</span></a><span class="sd">            Init a config parameter</span>
 </span><span id="BaseConfigParameter.__init__-23"><a href="#BaseConfigParameter.__init__-23"><span class="linenos">23</span></a>
 </span><span id="BaseConfigParameter.__init__-24"><a href="#BaseConfigParameter.__init__-24"><span class="linenos">24</span></a><span class="sd">            #### Args:</span>
@@ -307,7 +307,7 @@ class A():
     </div>
     <a class="headerlink" href="#BaseConfigParameter.check_value_to_set"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseConfigParameter.check_value_to_set-33"><a href="#BaseConfigParameter.check_value_to_set-33"><span class="linenos">33</span></a>    <span class="k">def</span> <span class="nf">check_value_to_set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="BaseConfigParameter.check_value_to_set-34"><a href="#BaseConfigParameter.check_value_to_set-34"><span class="linenos">34</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseConfigParameter.check_value_to_set-34"><a href="#BaseConfigParameter.check_value_to_set-34"><span class="linenos">34</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseConfigParameter.check_value_to_set-35"><a href="#BaseConfigParameter.check_value_to_set-35"><span class="linenos">35</span></a><span class="sd">            Check if the value is one of the possible values</span>
 </span><span id="BaseConfigParameter.check_value_to_set-36"><a href="#BaseConfigParameter.check_value_to_set-36"><span class="linenos">36</span></a>
 </span><span id="BaseConfigParameter.check_value_to_set-37"><a href="#BaseConfigParameter.check_value_to_set-37"><span class="linenos">37</span></a><span class="sd">            #### Args:</span>

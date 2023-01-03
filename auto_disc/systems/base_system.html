@@ -82,7 +82,7 @@
 </span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a>
 </span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>
 </span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="k">class</span> <span class="nc">BaseSystem</span><span class="p">(</span><span class="n">BaseAutoDiscModule</span><span class="p">):</span>
-</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="sd">    The main BaseSystem class. It encapsulates an environment with</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="sd">    arbitrary behind-the-scenes dynamics. An environment can be</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="sd">    partially or fully observed.</span>
@@ -115,7 +115,7 @@
 </span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">step_output_space</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>
 </span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_parameters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a><span class="sd">        Resets the environment to an initial state and returns an initial observation.</span>
 </span><span id="L-43"><a href="#L-43"><span class="linenos">43</span></a>
 </span><span id="L-44"><a href="#L-44"><span class="linenos">44</span></a><span class="sd">        #### Args:</span>
@@ -127,7 +127,7 @@
 </span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a>
 </span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a>    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
-</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-53"><a href="#L-53"><span class="linenos">53</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-54"><a href="#L-54"><span class="linenos">54</span></a><span class="sd">        Run one timestep of the system&#39;s dynamics. When end of</span>
 </span><span id="L-55"><a href="#L-55"><span class="linenos">55</span></a><span class="sd">        episode is reached, you are responsible for calling `reset()`</span>
 </span><span id="L-56"><a href="#L-56"><span class="linenos">56</span></a><span class="sd">        to reset this environment&#39;s state.</span>
@@ -145,20 +145,20 @@
 </span><span id="L-68"><a href="#L-68"><span class="linenos">68</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-69"><a href="#L-69"><span class="linenos">69</span></a>
 </span><span id="L-70"><a href="#L-70"><span class="linenos">70</span></a>    <span class="k">def</span> <span class="nf">observe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="L-71"><a href="#L-71"><span class="linenos">71</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-71"><a href="#L-71"><span class="linenos">71</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-72"><a href="#L-72"><span class="linenos">72</span></a><span class="sd">        Returns the overall output of the system according to the last `reset()`.</span>
 </span><span id="L-73"><a href="#L-73"><span class="linenos">73</span></a><span class="sd">        Use this function once the step function has returned `done=True` to give the system&#39;s output to the Output Representation (and then the explorer).</span>
 </span><span id="L-74"><a href="#L-74"><span class="linenos">74</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-75"><a href="#L-75"><span class="linenos">75</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-76"><a href="#L-76"><span class="linenos">76</span></a>
 </span><span id="L-77"><a href="#L-77"><span class="linenos">77</span></a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="L-78"><a href="#L-78"><span class="linenos">78</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-78"><a href="#L-78"><span class="linenos">78</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-79"><a href="#L-79"><span class="linenos">79</span></a><span class="sd">        Renders the environment.</span>
 </span><span id="L-80"><a href="#L-80"><span class="linenos">80</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-81"><a href="#L-81"><span class="linenos">81</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-82"><a href="#L-82"><span class="linenos">82</span></a>
 </span><span id="L-83"><a href="#L-83"><span class="linenos">83</span></a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="L-84"><a href="#L-84"><span class="linenos">84</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-84"><a href="#L-84"><span class="linenos">84</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-85"><a href="#L-85"><span class="linenos">85</span></a><span class="sd">        Override close in your subclass to perform any necessary cleanup.</span>
 </span><span id="L-86"><a href="#L-86"><span class="linenos">86</span></a><span class="sd">        Environments will automatically `close()` themselves when</span>
 </span><span id="L-87"><a href="#L-87"><span class="linenos">87</span></a><span class="sd">        garbage collected or when the program exits.</span>
@@ -180,7 +180,7 @@
     </div>
     <a class="headerlink" href="#BaseSystem"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSystem-8"><a href="#BaseSystem-8"><span class="linenos"> 8</span></a><span class="k">class</span> <span class="nc">BaseSystem</span><span class="p">(</span><span class="n">BaseAutoDiscModule</span><span class="p">):</span>
-</span><span id="BaseSystem-9"><a href="#BaseSystem-9"><span class="linenos"> 9</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem-9"><a href="#BaseSystem-9"><span class="linenos"> 9</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem-10"><a href="#BaseSystem-10"><span class="linenos">10</span></a><span class="sd">    The main BaseSystem class. It encapsulates an environment with</span>
 </span><span id="BaseSystem-11"><a href="#BaseSystem-11"><span class="linenos">11</span></a><span class="sd">    arbitrary behind-the-scenes dynamics. An environment can be</span>
 </span><span id="BaseSystem-12"><a href="#BaseSystem-12"><span class="linenos">12</span></a><span class="sd">    partially or fully observed.</span>
@@ -213,7 +213,7 @@
 </span><span id="BaseSystem-39"><a href="#BaseSystem-39"><span class="linenos">39</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">step_output_space</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </span><span id="BaseSystem-40"><a href="#BaseSystem-40"><span class="linenos">40</span></a>
 </span><span id="BaseSystem-41"><a href="#BaseSystem-41"><span class="linenos">41</span></a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_parameters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="BaseSystem-42"><a href="#BaseSystem-42"><span class="linenos">42</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem-42"><a href="#BaseSystem-42"><span class="linenos">42</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem-43"><a href="#BaseSystem-43"><span class="linenos">43</span></a><span class="sd">        Resets the environment to an initial state and returns an initial observation.</span>
 </span><span id="BaseSystem-44"><a href="#BaseSystem-44"><span class="linenos">44</span></a>
 </span><span id="BaseSystem-45"><a href="#BaseSystem-45"><span class="linenos">45</span></a><span class="sd">        #### Args:</span>
@@ -225,7 +225,7 @@
 </span><span id="BaseSystem-51"><a href="#BaseSystem-51"><span class="linenos">51</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseSystem-52"><a href="#BaseSystem-52"><span class="linenos">52</span></a>
 </span><span id="BaseSystem-53"><a href="#BaseSystem-53"><span class="linenos">53</span></a>    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
-</span><span id="BaseSystem-54"><a href="#BaseSystem-54"><span class="linenos">54</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem-54"><a href="#BaseSystem-54"><span class="linenos">54</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem-55"><a href="#BaseSystem-55"><span class="linenos">55</span></a><span class="sd">        Run one timestep of the system&#39;s dynamics. When end of</span>
 </span><span id="BaseSystem-56"><a href="#BaseSystem-56"><span class="linenos">56</span></a><span class="sd">        episode is reached, you are responsible for calling `reset()`</span>
 </span><span id="BaseSystem-57"><a href="#BaseSystem-57"><span class="linenos">57</span></a><span class="sd">        to reset this environment&#39;s state.</span>
@@ -243,20 +243,20 @@
 </span><span id="BaseSystem-69"><a href="#BaseSystem-69"><span class="linenos">69</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseSystem-70"><a href="#BaseSystem-70"><span class="linenos">70</span></a>
 </span><span id="BaseSystem-71"><a href="#BaseSystem-71"><span class="linenos">71</span></a>    <span class="k">def</span> <span class="nf">observe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseSystem-72"><a href="#BaseSystem-72"><span class="linenos">72</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem-72"><a href="#BaseSystem-72"><span class="linenos">72</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem-73"><a href="#BaseSystem-73"><span class="linenos">73</span></a><span class="sd">        Returns the overall output of the system according to the last `reset()`.</span>
 </span><span id="BaseSystem-74"><a href="#BaseSystem-74"><span class="linenos">74</span></a><span class="sd">        Use this function once the step function has returned `done=True` to give the system&#39;s output to the Output Representation (and then the explorer).</span>
 </span><span id="BaseSystem-75"><a href="#BaseSystem-75"><span class="linenos">75</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseSystem-76"><a href="#BaseSystem-76"><span class="linenos">76</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseSystem-77"><a href="#BaseSystem-77"><span class="linenos">77</span></a>
 </span><span id="BaseSystem-78"><a href="#BaseSystem-78"><span class="linenos">78</span></a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="BaseSystem-79"><a href="#BaseSystem-79"><span class="linenos">79</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem-79"><a href="#BaseSystem-79"><span class="linenos">79</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem-80"><a href="#BaseSystem-80"><span class="linenos">80</span></a><span class="sd">        Renders the environment.</span>
 </span><span id="BaseSystem-81"><a href="#BaseSystem-81"><span class="linenos">81</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseSystem-82"><a href="#BaseSystem-82"><span class="linenos">82</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseSystem-83"><a href="#BaseSystem-83"><span class="linenos">83</span></a>
 </span><span id="BaseSystem-84"><a href="#BaseSystem-84"><span class="linenos">84</span></a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseSystem-85"><a href="#BaseSystem-85"><span class="linenos">85</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem-85"><a href="#BaseSystem-85"><span class="linenos">85</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem-86"><a href="#BaseSystem-86"><span class="linenos">86</span></a><span class="sd">        Override close in your subclass to perform any necessary cleanup.</span>
 </span><span id="BaseSystem-87"><a href="#BaseSystem-87"><span class="linenos">87</span></a><span class="sd">        Environments will automatically `close()` themselves when</span>
 </span><span id="BaseSystem-88"><a href="#BaseSystem-88"><span class="linenos">88</span></a><span class="sd">        garbage collected or when the program exits.</span>
@@ -331,7 +331,7 @@ These parameters can then be accessed through <code>self.config.parameter_name</
     </div>
     <a class="headerlink" href="#BaseSystem.reset"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSystem.reset-41"><a href="#BaseSystem.reset-41"><span class="linenos">41</span></a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_parameters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="BaseSystem.reset-42"><a href="#BaseSystem.reset-42"><span class="linenos">42</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem.reset-42"><a href="#BaseSystem.reset-42"><span class="linenos">42</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem.reset-43"><a href="#BaseSystem.reset-43"><span class="linenos">43</span></a><span class="sd">        Resets the environment to an initial state and returns an initial observation.</span>
 </span><span id="BaseSystem.reset-44"><a href="#BaseSystem.reset-44"><span class="linenos">44</span></a>
 </span><span id="BaseSystem.reset-45"><a href="#BaseSystem.reset-45"><span class="linenos">45</span></a><span class="sd">        #### Args:</span>
@@ -373,7 +373,7 @@ These parameters can then be accessed through <code>self.config.parameter_name</
     </div>
     <a class="headerlink" href="#BaseSystem.step"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSystem.step-53"><a href="#BaseSystem.step-53"><span class="linenos">53</span></a>    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]:</span>
-</span><span id="BaseSystem.step-54"><a href="#BaseSystem.step-54"><span class="linenos">54</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem.step-54"><a href="#BaseSystem.step-54"><span class="linenos">54</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem.step-55"><a href="#BaseSystem.step-55"><span class="linenos">55</span></a><span class="sd">        Run one timestep of the system&#39;s dynamics. When end of</span>
 </span><span id="BaseSystem.step-56"><a href="#BaseSystem.step-56"><span class="linenos">56</span></a><span class="sd">        episode is reached, you are responsible for calling `reset()`</span>
 </span><span id="BaseSystem.step-57"><a href="#BaseSystem.step-57"><span class="linenos">57</span></a><span class="sd">        to reset this environment&#39;s state.</span>
@@ -427,7 +427,7 @@ Accepts an action and returns a tuple (observation, reward, done, info).</p>
     </div>
     <a class="headerlink" href="#BaseSystem.observe"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSystem.observe-71"><a href="#BaseSystem.observe-71"><span class="linenos">71</span></a>    <span class="k">def</span> <span class="nf">observe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseSystem.observe-72"><a href="#BaseSystem.observe-72"><span class="linenos">72</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem.observe-72"><a href="#BaseSystem.observe-72"><span class="linenos">72</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem.observe-73"><a href="#BaseSystem.observe-73"><span class="linenos">73</span></a><span class="sd">        Returns the overall output of the system according to the last `reset()`.</span>
 </span><span id="BaseSystem.observe-74"><a href="#BaseSystem.observe-74"><span class="linenos">74</span></a><span class="sd">        Use this function once the step function has returned `done=True` to give the system&#39;s output to the Output Representation (and then the explorer).</span>
 </span><span id="BaseSystem.observe-75"><a href="#BaseSystem.observe-75"><span class="linenos">75</span></a><span class="sd">        &quot;&quot;&quot;</span>
@@ -453,7 +453,7 @@ Use this function once the step function has returned <code>done=True</code> to 
     </div>
     <a class="headerlink" href="#BaseSystem.render"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSystem.render-78"><a href="#BaseSystem.render-78"><span class="linenos">78</span></a>    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="BaseSystem.render-79"><a href="#BaseSystem.render-79"><span class="linenos">79</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem.render-79"><a href="#BaseSystem.render-79"><span class="linenos">79</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem.render-80"><a href="#BaseSystem.render-80"><span class="linenos">80</span></a><span class="sd">        Renders the environment.</span>
 </span><span id="BaseSystem.render-81"><a href="#BaseSystem.render-81"><span class="linenos">81</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseSystem.render-82"><a href="#BaseSystem.render-82"><span class="linenos">82</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
@@ -477,7 +477,7 @@ Use this function once the step function has returned <code>done=True</code> to 
     </div>
     <a class="headerlink" href="#BaseSystem.close"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSystem.close-84"><a href="#BaseSystem.close-84"><span class="linenos">84</span></a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseSystem.close-85"><a href="#BaseSystem.close-85"><span class="linenos">85</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSystem.close-85"><a href="#BaseSystem.close-85"><span class="linenos">85</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSystem.close-86"><a href="#BaseSystem.close-86"><span class="linenos">86</span></a><span class="sd">        Override close in your subclass to perform any necessary cleanup.</span>
 </span><span id="BaseSystem.close-87"><a href="#BaseSystem.close-87"><span class="linenos">87</span></a><span class="sd">        Environments will automatically `close()` themselves when</span>
 </span><span id="BaseSystem.close-88"><a href="#BaseSystem.close-88"><span class="linenos">88</span></a><span class="sd">        garbage collected or when the program exits.</span>

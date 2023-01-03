@@ -81,7 +81,7 @@
 </span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="k">class</span> <span class="nc">BaseExplorer</span> <span class="p">(</span><span class="n">BaseAutoDiscModule</span><span class="p">):</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="sd">    Base class for explorers.</span>
 </span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a>
@@ -89,7 +89,7 @@
 </span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">,</span> <span class="n">output_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">,</span> <span class="n">input_distance_fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="sd">            Defines input and output space for the explorer (as well as a distance function for the input space).</span>
 </span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a>
 </span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a><span class="sd">            #### Args:</span>
@@ -102,7 +102,7 @@
 </span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">input_distance_fn</span> <span class="o">=</span> <span class="n">input_distance_fn</span>
 </span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a>
 </span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-32"><a href="#L-32"><span class="linenos">32</span></a><span class="sd">        Emits a new set of parameters to test in the system.</span>
 </span><span id="L-33"><a href="#L-33"><span class="linenos">33</span></a><span class="sd">        #### Returns:</span>
 </span><span id="L-34"><a href="#L-34"><span class="linenos">34</span></a><span class="sd">        - dict of parameters</span>
@@ -110,7 +110,7 @@
 </span><span id="L-36"><a href="#L-36"><span class="linenos">36</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </span><span id="L-37"><a href="#L-37"><span class="linenos">37</span></a>
 </span><span id="L-38"><a href="#L-38"><span class="linenos">38</span></a>    <span class="k">def</span> <span class="nf">observe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">observations</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
-</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-39"><a href="#L-39"><span class="linenos">39</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-40"><a href="#L-40"><span class="linenos">40</span></a><span class="sd">            Gives to the explorer the output of the system after using the parameters</span>
 </span><span id="L-41"><a href="#L-41"><span class="linenos">41</span></a>
 </span><span id="L-42"><a href="#L-42"><span class="linenos">42</span></a><span class="sd">            #### Args:</span>
@@ -120,7 +120,7 @@
 </span><span id="L-46"><a href="#L-46"><span class="linenos">46</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </span><span id="L-47"><a href="#L-47"><span class="linenos">47</span></a>
 </span><span id="L-48"><a href="#L-48"><span class="linenos">48</span></a>    <span class="k">def</span> <span class="nf">optimize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-49"><a href="#L-49"><span class="linenos">49</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-50"><a href="#L-50"><span class="linenos">50</span></a><span class="sd">        Optimizes the explorer&#39;s sample policy given the discoveries stored</span>
 </span><span id="L-51"><a href="#L-51"><span class="linenos">51</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="L-52"><a href="#L-52"><span class="linenos">52</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -170,7 +170,7 @@
     </div>
     <a class="headerlink" href="#BaseExplorer"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseExplorer-10"><a href="#BaseExplorer-10"><span class="linenos">10</span></a><span class="k">class</span> <span class="nc">BaseExplorer</span> <span class="p">(</span><span class="n">BaseAutoDiscModule</span><span class="p">):</span>
-</span><span id="BaseExplorer-11"><a href="#BaseExplorer-11"><span class="linenos">11</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer-11"><a href="#BaseExplorer-11"><span class="linenos">11</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer-12"><a href="#BaseExplorer-12"><span class="linenos">12</span></a><span class="sd">    Base class for explorers.</span>
 </span><span id="BaseExplorer-13"><a href="#BaseExplorer-13"><span class="linenos">13</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="BaseExplorer-14"><a href="#BaseExplorer-14"><span class="linenos">14</span></a>
@@ -178,7 +178,7 @@
 </span><span id="BaseExplorer-16"><a href="#BaseExplorer-16"><span class="linenos">16</span></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span><span id="BaseExplorer-17"><a href="#BaseExplorer-17"><span class="linenos">17</span></a>
 </span><span id="BaseExplorer-18"><a href="#BaseExplorer-18"><span class="linenos">18</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">,</span> <span class="n">output_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">,</span> <span class="n">input_distance_fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseExplorer-19"><a href="#BaseExplorer-19"><span class="linenos">19</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer-19"><a href="#BaseExplorer-19"><span class="linenos">19</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer-20"><a href="#BaseExplorer-20"><span class="linenos">20</span></a><span class="sd">            Defines input and output space for the explorer (as well as a distance function for the input space).</span>
 </span><span id="BaseExplorer-21"><a href="#BaseExplorer-21"><span class="linenos">21</span></a>
 </span><span id="BaseExplorer-22"><a href="#BaseExplorer-22"><span class="linenos">22</span></a><span class="sd">            #### Args:</span>
@@ -191,7 +191,7 @@
 </span><span id="BaseExplorer-29"><a href="#BaseExplorer-29"><span class="linenos">29</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">input_distance_fn</span> <span class="o">=</span> <span class="n">input_distance_fn</span>
 </span><span id="BaseExplorer-30"><a href="#BaseExplorer-30"><span class="linenos">30</span></a>
 </span><span id="BaseExplorer-31"><a href="#BaseExplorer-31"><span class="linenos">31</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseExplorer-32"><a href="#BaseExplorer-32"><span class="linenos">32</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer-32"><a href="#BaseExplorer-32"><span class="linenos">32</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer-33"><a href="#BaseExplorer-33"><span class="linenos">33</span></a><span class="sd">        Emits a new set of parameters to test in the system.</span>
 </span><span id="BaseExplorer-34"><a href="#BaseExplorer-34"><span class="linenos">34</span></a><span class="sd">        #### Returns:</span>
 </span><span id="BaseExplorer-35"><a href="#BaseExplorer-35"><span class="linenos">35</span></a><span class="sd">        - dict of parameters</span>
@@ -199,7 +199,7 @@
 </span><span id="BaseExplorer-37"><a href="#BaseExplorer-37"><span class="linenos">37</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </span><span id="BaseExplorer-38"><a href="#BaseExplorer-38"><span class="linenos">38</span></a>
 </span><span id="BaseExplorer-39"><a href="#BaseExplorer-39"><span class="linenos">39</span></a>    <span class="k">def</span> <span class="nf">observe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">observations</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
-</span><span id="BaseExplorer-40"><a href="#BaseExplorer-40"><span class="linenos">40</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer-40"><a href="#BaseExplorer-40"><span class="linenos">40</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer-41"><a href="#BaseExplorer-41"><span class="linenos">41</span></a><span class="sd">            Gives to the explorer the output of the system after using the parameters</span>
 </span><span id="BaseExplorer-42"><a href="#BaseExplorer-42"><span class="linenos">42</span></a>
 </span><span id="BaseExplorer-43"><a href="#BaseExplorer-43"><span class="linenos">43</span></a><span class="sd">            #### Args:</span>
@@ -209,7 +209,7 @@
 </span><span id="BaseExplorer-47"><a href="#BaseExplorer-47"><span class="linenos">47</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 </span><span id="BaseExplorer-48"><a href="#BaseExplorer-48"><span class="linenos">48</span></a>
 </span><span id="BaseExplorer-49"><a href="#BaseExplorer-49"><span class="linenos">49</span></a>    <span class="k">def</span> <span class="nf">optimize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseExplorer-50"><a href="#BaseExplorer-50"><span class="linenos">50</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer-50"><a href="#BaseExplorer-50"><span class="linenos">50</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer-51"><a href="#BaseExplorer-51"><span class="linenos">51</span></a><span class="sd">        Optimizes the explorer&#39;s sample policy given the discoveries stored</span>
 </span><span id="BaseExplorer-52"><a href="#BaseExplorer-52"><span class="linenos">52</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseExplorer-53"><a href="#BaseExplorer-53"><span class="linenos">53</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -258,7 +258,7 @@
     </div>
     <a class="headerlink" href="#BaseExplorer.initialize"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseExplorer.initialize-18"><a href="#BaseExplorer.initialize-18"><span class="linenos">18</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">,</span> <span class="n">output_space</span><span class="p">:</span> <span class="n">DictSpace</span><span class="p">,</span> <span class="n">input_distance_fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseExplorer.initialize-19"><a href="#BaseExplorer.initialize-19"><span class="linenos">19</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer.initialize-19"><a href="#BaseExplorer.initialize-19"><span class="linenos">19</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer.initialize-20"><a href="#BaseExplorer.initialize-20"><span class="linenos">20</span></a><span class="sd">            Defines input and output space for the explorer (as well as a distance function for the input space).</span>
 </span><span id="BaseExplorer.initialize-21"><a href="#BaseExplorer.initialize-21"><span class="linenos">21</span></a>
 </span><span id="BaseExplorer.initialize-22"><a href="#BaseExplorer.initialize-22"><span class="linenos">22</span></a><span class="sd">            #### Args:</span>
@@ -297,7 +297,7 @@
     </div>
     <a class="headerlink" href="#BaseExplorer.sample"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseExplorer.sample-31"><a href="#BaseExplorer.sample-31"><span class="linenos">31</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseExplorer.sample-32"><a href="#BaseExplorer.sample-32"><span class="linenos">32</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer.sample-32"><a href="#BaseExplorer.sample-32"><span class="linenos">32</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer.sample-33"><a href="#BaseExplorer.sample-33"><span class="linenos">33</span></a><span class="sd">        Emits a new set of parameters to test in the system.</span>
 </span><span id="BaseExplorer.sample-34"><a href="#BaseExplorer.sample-34"><span class="linenos">34</span></a><span class="sd">        #### Returns:</span>
 </span><span id="BaseExplorer.sample-35"><a href="#BaseExplorer.sample-35"><span class="linenos">35</span></a><span class="sd">        - dict of parameters</span>
@@ -329,7 +329,7 @@
     </div>
     <a class="headerlink" href="#BaseExplorer.observe"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseExplorer.observe-39"><a href="#BaseExplorer.observe-39"><span class="linenos">39</span></a>    <span class="k">def</span> <span class="nf">observe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">observations</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
-</span><span id="BaseExplorer.observe-40"><a href="#BaseExplorer.observe-40"><span class="linenos">40</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer.observe-40"><a href="#BaseExplorer.observe-40"><span class="linenos">40</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer.observe-41"><a href="#BaseExplorer.observe-41"><span class="linenos">41</span></a><span class="sd">            Gives to the explorer the output of the system after using the parameters</span>
 </span><span id="BaseExplorer.observe-42"><a href="#BaseExplorer.observe-42"><span class="linenos">42</span></a>
 </span><span id="BaseExplorer.observe-43"><a href="#BaseExplorer.observe-43"><span class="linenos">43</span></a><span class="sd">            #### Args:</span>
@@ -364,7 +364,7 @@
     </div>
     <a class="headerlink" href="#BaseExplorer.optimize"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseExplorer.optimize-49"><a href="#BaseExplorer.optimize-49"><span class="linenos">49</span></a>    <span class="k">def</span> <span class="nf">optimize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseExplorer.optimize-50"><a href="#BaseExplorer.optimize-50"><span class="linenos">50</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseExplorer.optimize-50"><a href="#BaseExplorer.optimize-50"><span class="linenos">50</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseExplorer.optimize-51"><a href="#BaseExplorer.optimize-51"><span class="linenos">51</span></a><span class="sd">        Optimizes the explorer&#39;s sample policy given the discoveries stored</span>
 </span><span id="BaseExplorer.optimize-52"><a href="#BaseExplorer.optimize-52"><span class="linenos">52</span></a><span class="sd">        &quot;&quot;&quot;</span>
 </span><span id="BaseExplorer.optimize-53"><a href="#BaseExplorer.optimize-53"><span class="linenos">53</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>

@@ -86,7 +86,7 @@
 </span><span id="L-6"><a href="#L-6"><span class="linenos">  6</span></a>
 </span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a>
 </span><span id="L-8"><a href="#L-8"><span class="linenos">  8</span></a><span class="k">class</span> <span class="nc">DiscreteSpace</span><span class="p">(</span><span class="n">BaseSpace</span><span class="p">):</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A discrete space in :math:`\{ 0, 1, \\dots, n-1 \}`.</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a><span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;A discrete space in :math:`\{ 0, 1, \\dots, n-1 \}`.</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos"> 10</span></a><span class="sd">    /!\ mutation is gaussian by default: please create custom space inheriting from discrete space for custom mutation functions</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos"> 11</span></a>
 </span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a><span class="sd">    Example::</span>
@@ -96,7 +96,7 @@
 </span><span id="L-16"><a href="#L-16"><span class="linenos"> 16</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-17"><a href="#L-17"><span class="linenos"> 17</span></a>
 </span><span id="L-18"><a href="#L-18"><span class="linenos"> 18</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span> <span class="n">BaseMutator</span> <span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indpb</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-19"><a href="#L-19"><span class="linenos"> 19</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-19"><a href="#L-19"><span class="linenos"> 19</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-20"><a href="#L-20"><span class="linenos"> 20</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="L-21"><a href="#L-21"><span class="linenos"> 21</span></a>
 </span><span id="L-22"><a href="#L-22"><span class="linenos"> 22</span></a><span class="sd">            Args:</span>
@@ -111,7 +111,7 @@
 </span><span id="L-31"><a href="#L-31"><span class="linenos"> 31</span></a>        <span class="nb">super</span><span class="p">(</span><span class="n">DiscreteSpace</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">((),</span><span class="n">torch</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">mutator</span><span class="p">)</span>
 </span><span id="L-32"><a href="#L-32"><span class="linenos"> 32</span></a>
 </span><span id="L-33"><a href="#L-33"><span class="linenos"> 33</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-34"><a href="#L-34"><span class="linenos"> 34</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-34"><a href="#L-34"><span class="linenos"> 34</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-35"><a href="#L-35"><span class="linenos"> 35</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="L-36"><a href="#L-36"><span class="linenos"> 36</span></a>
 </span><span id="L-37"><a href="#L-37"><span class="linenos"> 37</span></a><span class="sd">            Args:</span>
@@ -125,7 +125,7 @@
 </span><span id="L-45"><a href="#L-45"><span class="linenos"> 45</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">indpb</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_indpb</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 </span><span id="L-46"><a href="#L-46"><span class="linenos"> 46</span></a>
 </span><span id="L-47"><a href="#L-47"><span class="linenos"> 47</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="L-48"><a href="#L-48"><span class="linenos"> 48</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-48"><a href="#L-48"><span class="linenos"> 48</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-49"><a href="#L-49"><span class="linenos"> 49</span></a><span class="sd">        Generates a single random sample, upper than 0 and lower than n.</span>
 </span><span id="L-50"><a href="#L-50"><span class="linenos"> 50</span></a>
 </span><span id="L-51"><a href="#L-51"><span class="linenos"> 51</span></a><span class="sd">        Return:</span>
@@ -134,7 +134,7 @@
 </span><span id="L-54"><a href="#L-54"><span class="linenos"> 54</span></a>        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="p">())</span>
 </span><span id="L-55"><a href="#L-55"><span class="linenos"> 55</span></a>
 </span><span id="L-56"><a href="#L-56"><span class="linenos"> 56</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="L-57"><a href="#L-57"><span class="linenos"> 57</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-57"><a href="#L-57"><span class="linenos"> 57</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-58"><a href="#L-58"><span class="linenos"> 58</span></a><span class="sd">            Apply the mutation of the mutator on x</span>
 </span><span id="L-59"><a href="#L-59"><span class="linenos"> 59</span></a>
 </span><span id="L-60"><a href="#L-60"><span class="linenos"> 60</span></a><span class="sd">            Args:</span>
@@ -154,7 +154,7 @@
 </span><span id="L-74"><a href="#L-74"><span class="linenos"> 74</span></a>            <span class="k">return</span> <span class="n">x</span>
 </span><span id="L-75"><a href="#L-75"><span class="linenos"> 75</span></a>
 </span><span id="L-76"><a href="#L-76"><span class="linenos"> 76</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="L-77"><a href="#L-77"><span class="linenos"> 77</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-77"><a href="#L-77"><span class="linenos"> 77</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-78"><a href="#L-78"><span class="linenos"> 78</span></a><span class="sd">            Check if x is bounded between 0 and n</span>
 </span><span id="L-79"><a href="#L-79"><span class="linenos"> 79</span></a>
 </span><span id="L-80"><a href="#L-80"><span class="linenos"> 80</span></a><span class="sd">            Args:</span>
@@ -171,7 +171,7 @@
 </span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a>        <span class="k">return</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">as_int</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
 </span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a>
 </span><span id="L-93"><a href="#L-93"><span class="linenos"> 93</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-95"><a href="#L-95"><span class="linenos"> 95</span></a><span class="sd">            Set x to an acceptable value of the space</span>
 </span><span id="L-96"><a href="#L-96"><span class="linenos"> 96</span></a><span class="sd">            Args:</span>
 </span><span id="L-97"><a href="#L-97"><span class="linenos"> 97</span></a><span class="sd">                x: The value to set</span>
@@ -183,7 +183,7 @@
 </span><span id="L-103"><a href="#L-103"><span class="linenos">103</span></a>        <span class="k">return</span> <span class="n">x</span>
 </span><span id="L-104"><a href="#L-104"><span class="linenos">104</span></a>
 </span><span id="L-105"><a href="#L-105"><span class="linenos">105</span></a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="L-106"><a href="#L-106"><span class="linenos">106</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-106"><a href="#L-106"><span class="linenos">106</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-107"><a href="#L-107"><span class="linenos">107</span></a><span class="sd">            Give a string representation of the class&#39;s object</span>
 </span><span id="L-108"><a href="#L-108"><span class="linenos">108</span></a>
 </span><span id="L-109"><a href="#L-109"><span class="linenos">109</span></a><span class="sd">            Returns:</span>
@@ -192,7 +192,7 @@
 </span><span id="L-112"><a href="#L-112"><span class="linenos">112</span></a>        <span class="k">return</span> <span class="s2">&quot;DiscreteSpace(</span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
 </span><span id="L-113"><a href="#L-113"><span class="linenos">113</span></a>
 </span><span id="L-114"><a href="#L-114"><span class="linenos">114</span></a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="L-115"><a href="#L-115"><span class="linenos">115</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-115"><a href="#L-115"><span class="linenos">115</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-116"><a href="#L-116"><span class="linenos">116</span></a><span class="sd">            Check if the other object are equal to the current object</span>
 </span><span id="L-117"><a href="#L-117"><span class="linenos">117</span></a>
 </span><span id="L-118"><a href="#L-118"><span class="linenos">118</span></a><span class="sd">            Args:</span>
@@ -203,7 +203,7 @@
 </span><span id="L-123"><a href="#L-123"><span class="linenos">123</span></a>        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">DiscreteSpace</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">n</span>
 </span><span id="L-124"><a href="#L-124"><span class="linenos">124</span></a>
 </span><span id="L-125"><a href="#L-125"><span class="linenos">125</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-</span><span id="L-126"><a href="#L-126"><span class="linenos">126</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-126"><a href="#L-126"><span class="linenos">126</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-127"><a href="#L-127"><span class="linenos">127</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="L-128"><a href="#L-128"><span class="linenos">128</span></a>
 </span><span id="L-129"><a href="#L-129"><span class="linenos">129</span></a><span class="sd">            Returns:</span>
@@ -229,7 +229,7 @@
     </div>
     <a class="headerlink" href="#DiscreteSpace"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DiscreteSpace-9"><a href="#DiscreteSpace-9"><span class="linenos">  9</span></a><span class="k">class</span> <span class="nc">DiscreteSpace</span><span class="p">(</span><span class="n">BaseSpace</span><span class="p">):</span>
-</span><span id="DiscreteSpace-10"><a href="#DiscreteSpace-10"><span class="linenos"> 10</span></a>    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;A discrete space in :math:`\{ 0, 1, \\dots, n-1 \}`.</span>
+</span><span id="DiscreteSpace-10"><a href="#DiscreteSpace-10"><span class="linenos"> 10</span></a><span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;A discrete space in :math:`\{ 0, 1, \\dots, n-1 \}`.</span>
 </span><span id="DiscreteSpace-11"><a href="#DiscreteSpace-11"><span class="linenos"> 11</span></a><span class="sd">    /!\ mutation is gaussian by default: please create custom space inheriting from discrete space for custom mutation functions</span>
 </span><span id="DiscreteSpace-12"><a href="#DiscreteSpace-12"><span class="linenos"> 12</span></a>
 </span><span id="DiscreteSpace-13"><a href="#DiscreteSpace-13"><span class="linenos"> 13</span></a><span class="sd">    Example::</span>
@@ -239,7 +239,7 @@
 </span><span id="DiscreteSpace-17"><a href="#DiscreteSpace-17"><span class="linenos"> 17</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-18"><a href="#DiscreteSpace-18"><span class="linenos"> 18</span></a>
 </span><span id="DiscreteSpace-19"><a href="#DiscreteSpace-19"><span class="linenos"> 19</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span> <span class="n">BaseMutator</span> <span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indpb</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DiscreteSpace-20"><a href="#DiscreteSpace-20"><span class="linenos"> 20</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-20"><a href="#DiscreteSpace-20"><span class="linenos"> 20</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-21"><a href="#DiscreteSpace-21"><span class="linenos"> 21</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="DiscreteSpace-22"><a href="#DiscreteSpace-22"><span class="linenos"> 22</span></a>
 </span><span id="DiscreteSpace-23"><a href="#DiscreteSpace-23"><span class="linenos"> 23</span></a><span class="sd">            Args:</span>
@@ -254,7 +254,7 @@
 </span><span id="DiscreteSpace-32"><a href="#DiscreteSpace-32"><span class="linenos"> 32</span></a>        <span class="nb">super</span><span class="p">(</span><span class="n">DiscreteSpace</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">((),</span><span class="n">torch</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">mutator</span><span class="p">)</span>
 </span><span id="DiscreteSpace-33"><a href="#DiscreteSpace-33"><span class="linenos"> 33</span></a>
 </span><span id="DiscreteSpace-34"><a href="#DiscreteSpace-34"><span class="linenos"> 34</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DiscreteSpace-35"><a href="#DiscreteSpace-35"><span class="linenos"> 35</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-35"><a href="#DiscreteSpace-35"><span class="linenos"> 35</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-36"><a href="#DiscreteSpace-36"><span class="linenos"> 36</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="DiscreteSpace-37"><a href="#DiscreteSpace-37"><span class="linenos"> 37</span></a>
 </span><span id="DiscreteSpace-38"><a href="#DiscreteSpace-38"><span class="linenos"> 38</span></a><span class="sd">            Args:</span>
@@ -268,7 +268,7 @@
 </span><span id="DiscreteSpace-46"><a href="#DiscreteSpace-46"><span class="linenos"> 46</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">indpb</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">as_tensor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_indpb</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 </span><span id="DiscreteSpace-47"><a href="#DiscreteSpace-47"><span class="linenos"> 47</span></a>
 </span><span id="DiscreteSpace-48"><a href="#DiscreteSpace-48"><span class="linenos"> 48</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="DiscreteSpace-49"><a href="#DiscreteSpace-49"><span class="linenos"> 49</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-49"><a href="#DiscreteSpace-49"><span class="linenos"> 49</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-50"><a href="#DiscreteSpace-50"><span class="linenos"> 50</span></a><span class="sd">        Generates a single random sample, upper than 0 and lower than n.</span>
 </span><span id="DiscreteSpace-51"><a href="#DiscreteSpace-51"><span class="linenos"> 51</span></a>
 </span><span id="DiscreteSpace-52"><a href="#DiscreteSpace-52"><span class="linenos"> 52</span></a><span class="sd">        Return:</span>
@@ -277,7 +277,7 @@
 </span><span id="DiscreteSpace-55"><a href="#DiscreteSpace-55"><span class="linenos"> 55</span></a>        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="p">())</span>
 </span><span id="DiscreteSpace-56"><a href="#DiscreteSpace-56"><span class="linenos"> 56</span></a>
 </span><span id="DiscreteSpace-57"><a href="#DiscreteSpace-57"><span class="linenos"> 57</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="DiscreteSpace-58"><a href="#DiscreteSpace-58"><span class="linenos"> 58</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-58"><a href="#DiscreteSpace-58"><span class="linenos"> 58</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-59"><a href="#DiscreteSpace-59"><span class="linenos"> 59</span></a><span class="sd">            Apply the mutation of the mutator on x</span>
 </span><span id="DiscreteSpace-60"><a href="#DiscreteSpace-60"><span class="linenos"> 60</span></a>
 </span><span id="DiscreteSpace-61"><a href="#DiscreteSpace-61"><span class="linenos"> 61</span></a><span class="sd">            Args:</span>
@@ -297,7 +297,7 @@
 </span><span id="DiscreteSpace-75"><a href="#DiscreteSpace-75"><span class="linenos"> 75</span></a>            <span class="k">return</span> <span class="n">x</span>
 </span><span id="DiscreteSpace-76"><a href="#DiscreteSpace-76"><span class="linenos"> 76</span></a>
 </span><span id="DiscreteSpace-77"><a href="#DiscreteSpace-77"><span class="linenos"> 77</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="DiscreteSpace-78"><a href="#DiscreteSpace-78"><span class="linenos"> 78</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-78"><a href="#DiscreteSpace-78"><span class="linenos"> 78</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-79"><a href="#DiscreteSpace-79"><span class="linenos"> 79</span></a><span class="sd">            Check if x is bounded between 0 and n</span>
 </span><span id="DiscreteSpace-80"><a href="#DiscreteSpace-80"><span class="linenos"> 80</span></a>
 </span><span id="DiscreteSpace-81"><a href="#DiscreteSpace-81"><span class="linenos"> 81</span></a><span class="sd">            Args:</span>
@@ -314,7 +314,7 @@
 </span><span id="DiscreteSpace-92"><a href="#DiscreteSpace-92"><span class="linenos"> 92</span></a>        <span class="k">return</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">as_int</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
 </span><span id="DiscreteSpace-93"><a href="#DiscreteSpace-93"><span class="linenos"> 93</span></a>
 </span><span id="DiscreteSpace-94"><a href="#DiscreteSpace-94"><span class="linenos"> 94</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="DiscreteSpace-95"><a href="#DiscreteSpace-95"><span class="linenos"> 95</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-95"><a href="#DiscreteSpace-95"><span class="linenos"> 95</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-96"><a href="#DiscreteSpace-96"><span class="linenos"> 96</span></a><span class="sd">            Set x to an acceptable value of the space</span>
 </span><span id="DiscreteSpace-97"><a href="#DiscreteSpace-97"><span class="linenos"> 97</span></a><span class="sd">            Args:</span>
 </span><span id="DiscreteSpace-98"><a href="#DiscreteSpace-98"><span class="linenos"> 98</span></a><span class="sd">                x: The value to set</span>
@@ -326,7 +326,7 @@
 </span><span id="DiscreteSpace-104"><a href="#DiscreteSpace-104"><span class="linenos">104</span></a>        <span class="k">return</span> <span class="n">x</span>
 </span><span id="DiscreteSpace-105"><a href="#DiscreteSpace-105"><span class="linenos">105</span></a>
 </span><span id="DiscreteSpace-106"><a href="#DiscreteSpace-106"><span class="linenos">106</span></a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="DiscreteSpace-107"><a href="#DiscreteSpace-107"><span class="linenos">107</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-107"><a href="#DiscreteSpace-107"><span class="linenos">107</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-108"><a href="#DiscreteSpace-108"><span class="linenos">108</span></a><span class="sd">            Give a string representation of the class&#39;s object</span>
 </span><span id="DiscreteSpace-109"><a href="#DiscreteSpace-109"><span class="linenos">109</span></a>
 </span><span id="DiscreteSpace-110"><a href="#DiscreteSpace-110"><span class="linenos">110</span></a><span class="sd">            Returns:</span>
@@ -335,7 +335,7 @@
 </span><span id="DiscreteSpace-113"><a href="#DiscreteSpace-113"><span class="linenos">113</span></a>        <span class="k">return</span> <span class="s2">&quot;DiscreteSpace(</span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
 </span><span id="DiscreteSpace-114"><a href="#DiscreteSpace-114"><span class="linenos">114</span></a>
 </span><span id="DiscreteSpace-115"><a href="#DiscreteSpace-115"><span class="linenos">115</span></a>    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="DiscreteSpace-116"><a href="#DiscreteSpace-116"><span class="linenos">116</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-116"><a href="#DiscreteSpace-116"><span class="linenos">116</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-117"><a href="#DiscreteSpace-117"><span class="linenos">117</span></a><span class="sd">            Check if the other object are equal to the current object</span>
 </span><span id="DiscreteSpace-118"><a href="#DiscreteSpace-118"><span class="linenos">118</span></a>
 </span><span id="DiscreteSpace-119"><a href="#DiscreteSpace-119"><span class="linenos">119</span></a><span class="sd">            Args:</span>
@@ -346,7 +346,7 @@
 </span><span id="DiscreteSpace-124"><a href="#DiscreteSpace-124"><span class="linenos">124</span></a>        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">DiscreteSpace</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">n</span>
 </span><span id="DiscreteSpace-125"><a href="#DiscreteSpace-125"><span class="linenos">125</span></a>
 </span><span id="DiscreteSpace-126"><a href="#DiscreteSpace-126"><span class="linenos">126</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-</span><span id="DiscreteSpace-127"><a href="#DiscreteSpace-127"><span class="linenos">127</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace-127"><a href="#DiscreteSpace-127"><span class="linenos">127</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace-128"><a href="#DiscreteSpace-128"><span class="linenos">128</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="DiscreteSpace-129"><a href="#DiscreteSpace-129"><span class="linenos">129</span></a>
 </span><span id="DiscreteSpace-130"><a href="#DiscreteSpace-130"><span class="linenos">130</span></a><span class="sd">            Returns:</span>
@@ -380,7 +380,7 @@
     </div>
     <a class="headerlink" href="#DiscreteSpace.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DiscreteSpace.__init__-19"><a href="#DiscreteSpace.__init__-19"><span class="linenos">19</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span> <span class="n">BaseMutator</span> <span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indpb</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DiscreteSpace.__init__-20"><a href="#DiscreteSpace.__init__-20"><span class="linenos">20</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace.__init__-20"><a href="#DiscreteSpace.__init__-20"><span class="linenos">20</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace.__init__-21"><a href="#DiscreteSpace.__init__-21"><span class="linenos">21</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="DiscreteSpace.__init__-22"><a href="#DiscreteSpace.__init__-22"><span class="linenos">22</span></a>
 </span><span id="DiscreteSpace.__init__-23"><a href="#DiscreteSpace.__init__-23"><span class="linenos">23</span></a><span class="sd">            Args:</span>
@@ -418,7 +418,7 @@
     </div>
     <a class="headerlink" href="#DiscreteSpace.initialize"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DiscreteSpace.initialize-34"><a href="#DiscreteSpace.initialize-34"><span class="linenos">34</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="DiscreteSpace.initialize-35"><a href="#DiscreteSpace.initialize-35"><span class="linenos">35</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace.initialize-35"><a href="#DiscreteSpace.initialize-35"><span class="linenos">35</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace.initialize-36"><a href="#DiscreteSpace.initialize-36"><span class="linenos">36</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="DiscreteSpace.initialize-37"><a href="#DiscreteSpace.initialize-37"><span class="linenos">37</span></a>
 </span><span id="DiscreteSpace.initialize-38"><a href="#DiscreteSpace.initialize-38"><span class="linenos">38</span></a><span class="sd">            Args:</span>
@@ -453,7 +453,7 @@
     </div>
     <a class="headerlink" href="#DiscreteSpace.sample"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DiscreteSpace.sample-48"><a href="#DiscreteSpace.sample-48"><span class="linenos">48</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="DiscreteSpace.sample-49"><a href="#DiscreteSpace.sample-49"><span class="linenos">49</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace.sample-49"><a href="#DiscreteSpace.sample-49"><span class="linenos">49</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace.sample-50"><a href="#DiscreteSpace.sample-50"><span class="linenos">50</span></a><span class="sd">        Generates a single random sample, upper than 0 and lower than n.</span>
 </span><span id="DiscreteSpace.sample-51"><a href="#DiscreteSpace.sample-51"><span class="linenos">51</span></a>
 </span><span id="DiscreteSpace.sample-52"><a href="#DiscreteSpace.sample-52"><span class="linenos">52</span></a><span class="sd">        Return:</span>
@@ -483,7 +483,7 @@
     </div>
     <a class="headerlink" href="#DiscreteSpace.mutate"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DiscreteSpace.mutate-57"><a href="#DiscreteSpace.mutate-57"><span class="linenos">57</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="DiscreteSpace.mutate-58"><a href="#DiscreteSpace.mutate-58"><span class="linenos">58</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace.mutate-58"><a href="#DiscreteSpace.mutate-58"><span class="linenos">58</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace.mutate-59"><a href="#DiscreteSpace.mutate-59"><span class="linenos">59</span></a><span class="sd">            Apply the mutation of the mutator on x</span>
 </span><span id="DiscreteSpace.mutate-60"><a href="#DiscreteSpace.mutate-60"><span class="linenos">60</span></a>
 </span><span id="DiscreteSpace.mutate-61"><a href="#DiscreteSpace.mutate-61"><span class="linenos">61</span></a><span class="sd">            Args:</span>
@@ -526,7 +526,7 @@ Returns:
     </div>
     <a class="headerlink" href="#DiscreteSpace.contains"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DiscreteSpace.contains-77"><a href="#DiscreteSpace.contains-77"><span class="linenos">77</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="DiscreteSpace.contains-78"><a href="#DiscreteSpace.contains-78"><span class="linenos">78</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace.contains-78"><a href="#DiscreteSpace.contains-78"><span class="linenos">78</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace.contains-79"><a href="#DiscreteSpace.contains-79"><span class="linenos">79</span></a><span class="sd">            Check if x is bounded between 0 and n</span>
 </span><span id="DiscreteSpace.contains-80"><a href="#DiscreteSpace.contains-80"><span class="linenos">80</span></a>
 </span><span id="DiscreteSpace.contains-81"><a href="#DiscreteSpace.contains-81"><span class="linenos">81</span></a><span class="sd">            Args:</span>
@@ -566,7 +566,7 @@ Returns:
     </div>
     <a class="headerlink" href="#DiscreteSpace.clamp"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DiscreteSpace.clamp-94"><a href="#DiscreteSpace.clamp-94"><span class="linenos"> 94</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">:</span>
-</span><span id="DiscreteSpace.clamp-95"><a href="#DiscreteSpace.clamp-95"><span class="linenos"> 95</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace.clamp-95"><a href="#DiscreteSpace.clamp-95"><span class="linenos"> 95</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace.clamp-96"><a href="#DiscreteSpace.clamp-96"><span class="linenos"> 96</span></a><span class="sd">            Set x to an acceptable value of the space</span>
 </span><span id="DiscreteSpace.clamp-97"><a href="#DiscreteSpace.clamp-97"><span class="linenos"> 97</span></a><span class="sd">            Args:</span>
 </span><span id="DiscreteSpace.clamp-98"><a href="#DiscreteSpace.clamp-98"><span class="linenos"> 98</span></a><span class="sd">                x: The value to set</span>
@@ -600,7 +600,7 @@ Returns:
     </div>
     <a class="headerlink" href="#DiscreteSpace.to_json"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="DiscreteSpace.to_json-126"><a href="#DiscreteSpace.to_json-126"><span class="linenos">126</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
-</span><span id="DiscreteSpace.to_json-127"><a href="#DiscreteSpace.to_json-127"><span class="linenos">127</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="DiscreteSpace.to_json-127"><a href="#DiscreteSpace.to_json-127"><span class="linenos">127</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="DiscreteSpace.to_json-128"><a href="#DiscreteSpace.to_json-128"><span class="linenos">128</span></a><span class="sd">            Convert the object into JSON</span>
 </span><span id="DiscreteSpace.to_json-129"><a href="#DiscreteSpace.to_json-129"><span class="linenos">129</span></a>
 </span><span id="DiscreteSpace.to_json-130"><a href="#DiscreteSpace.to_json-130"><span class="linenos">130</span></a><span class="sd">            Returns:</span>

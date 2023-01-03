@@ -87,12 +87,12 @@
 </span><span id="L-4"><a href="#L-4"><span class="linenos">  4</span></a><span class="kn">from</span> <span class="nn">auto_disc.utils.spaces.utils</span> <span class="kn">import</span> <span class="n">ConfigParameterBinding</span>
 </span><span id="L-5"><a href="#L-5"><span class="linenos">  5</span></a><span class="kn">from</span> <span class="nn">auto_disc.utils.mutators</span> <span class="kn">import</span> <span class="n">BaseMutator</span>
 </span><span id="L-6"><a href="#L-6"><span class="linenos">  6</span></a><span class="k">class</span> <span class="nc">BaseSpace</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos">  8</span></a><span class="sd">        Defines the init_space, genome_space and intervention_space of a system</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos"> 10</span></a>
 </span><span id="L-11"><a href="#L-11"><span class="linenos"> 11</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ConfigParameterBinding</span><span class="p">,</span><span class="n">Any</span><span class="p">]]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span><span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span><span class="n">BaseMutator</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-13"><a href="#L-13"><span class="linenos"> 13</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="L-14"><a href="#L-14"><span class="linenos"> 14</span></a>
 </span><span id="L-15"><a href="#L-15"><span class="linenos"> 15</span></a><span class="sd">            Args:</span>
@@ -105,7 +105,7 @@
 </span><span id="L-22"><a href="#L-22"><span class="linenos"> 22</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">mutator</span> <span class="o">=</span> <span class="n">mutator</span>
 </span><span id="L-23"><a href="#L-23"><span class="linenos"> 23</span></a>
 </span><span id="L-24"><a href="#L-24"><span class="linenos"> 24</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="n">BaseAutoDiscModule</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="L-25"><a href="#L-25"><span class="linenos"> 25</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-25"><a href="#L-25"><span class="linenos"> 25</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-26"><a href="#L-26"><span class="linenos"> 26</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="L-27"><a href="#L-27"><span class="linenos"> 27</span></a>
 </span><span id="L-28"><a href="#L-28"><span class="linenos"> 28</span></a><span class="sd">            Args:</span>
@@ -120,7 +120,7 @@
 </span><span id="L-37"><a href="#L-37"><span class="linenos"> 37</span></a>                <span class="bp">self</span><span class="o">.</span><span class="n">mutator</span><span class="o">.</span><span class="n">init_shape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="L-38"><a href="#L-38"><span class="linenos"> 38</span></a>
 </span><span id="L-39"><a href="#L-39"><span class="linenos"> 39</span></a>    <span class="k">def</span> <span class="nf">apply_binding_if_existing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="n">ConfigParameterBinding</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">lookup_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-</span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-40"><a href="#L-40"><span class="linenos"> 40</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-41"><a href="#L-41"><span class="linenos"> 41</span></a><span class="sd">            Get result of config parameter binding operation</span>
 </span><span id="L-42"><a href="#L-42"><span class="linenos"> 42</span></a>
 </span><span id="L-43"><a href="#L-43"><span class="linenos"> 43</span></a><span class="sd">            Args:</span>
@@ -137,13 +137,13 @@
 </span><span id="L-54"><a href="#L-54"><span class="linenos"> 54</span></a>        <span class="k">return</span> <span class="n">value</span>
 </span><span id="L-55"><a href="#L-55"><span class="linenos"> 55</span></a>
 </span><span id="L-56"><a href="#L-56"><span class="linenos"> 56</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="L-57"><a href="#L-57"><span class="linenos"> 57</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-57"><a href="#L-57"><span class="linenos"> 57</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-58"><a href="#L-58"><span class="linenos"> 58</span></a><span class="sd">        Randomly sample an element of this space.</span>
 </span><span id="L-59"><a href="#L-59"><span class="linenos"> 59</span></a><span class="sd">        Can be uniform or non-uniform sampling based on boundedness of space.&quot;&quot;&quot;</span>
 </span><span id="L-60"><a href="#L-60"><span class="linenos"> 60</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-61"><a href="#L-61"><span class="linenos"> 61</span></a>
 </span><span id="L-62"><a href="#L-62"><span class="linenos"> 62</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="L-63"><a href="#L-63"><span class="linenos"> 63</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-63"><a href="#L-63"><span class="linenos"> 63</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-64"><a href="#L-64"><span class="linenos"> 64</span></a><span class="sd">        Randomly mutate an element of this space.</span>
 </span><span id="L-65"><a href="#L-65"><span class="linenos"> 65</span></a>
 </span><span id="L-66"><a href="#L-66"><span class="linenos"> 66</span></a><span class="sd">        Args:</span>
@@ -152,7 +152,7 @@
 </span><span id="L-69"><a href="#L-69"><span class="linenos"> 69</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-70"><a href="#L-70"><span class="linenos"> 70</span></a>
 </span><span id="L-71"><a href="#L-71"><span class="linenos"> 71</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="L-72"><a href="#L-72"><span class="linenos"> 72</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-72"><a href="#L-72"><span class="linenos"> 72</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-73"><a href="#L-73"><span class="linenos"> 73</span></a><span class="sd">        Return boolean specifying if x is a valid</span>
 </span><span id="L-74"><a href="#L-74"><span class="linenos"> 74</span></a><span class="sd">        member of this space</span>
 </span><span id="L-75"><a href="#L-75"><span class="linenos"> 75</span></a>
@@ -162,7 +162,7 @@
 </span><span id="L-79"><a href="#L-79"><span class="linenos"> 79</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-80"><a href="#L-80"><span class="linenos"> 80</span></a>
 </span><span id="L-81"><a href="#L-81"><span class="linenos"> 81</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="L-82"><a href="#L-82"><span class="linenos"> 82</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-82"><a href="#L-82"><span class="linenos"> 82</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a><span class="sd">        Return a valid clamped value of x inside space&#39;s bounds</span>
 </span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a>
 </span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a><span class="sd">        Args:</span>
@@ -171,7 +171,7 @@
 </span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="L-89"><a href="#L-89"><span class="linenos"> 89</span></a>
 </span><span id="L-90"><a href="#L-90"><span class="linenos"> 90</span></a>    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-91"><a href="#L-91"><span class="linenos"> 91</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-92"><a href="#L-92"><span class="linenos"> 92</span></a><span class="sd">        Return boolean specifying if x is a valid</span>
 </span><span id="L-93"><a href="#L-93"><span class="linenos"> 93</span></a><span class="sd">        member of this space</span>
 </span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a>
@@ -181,7 +181,7 @@
 </span><span id="L-98"><a href="#L-98"><span class="linenos"> 98</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a>
 </span><span id="L-100"><a href="#L-100"><span class="linenos">100</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="L-101"><a href="#L-101"><span class="linenos">101</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-101"><a href="#L-101"><span class="linenos">101</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-102"><a href="#L-102"><span class="linenos">102</span></a><span class="sd">            Convert the space into JSON</span>
 </span><span id="L-103"><a href="#L-103"><span class="linenos">103</span></a>
 </span><span id="L-104"><a href="#L-104"><span class="linenos">104</span></a><span class="sd">            Returns:</span>
@@ -215,12 +215,12 @@
     </div>
     <a class="headerlink" href="#BaseSpace"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace-7"><a href="#BaseSpace-7"><span class="linenos">  7</span></a><span class="k">class</span> <span class="nc">BaseSpace</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-</span><span id="BaseSpace-8"><a href="#BaseSpace-8"><span class="linenos">  8</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-8"><a href="#BaseSpace-8"><span class="linenos">  8</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-9"><a href="#BaseSpace-9"><span class="linenos">  9</span></a><span class="sd">        Defines the init_space, genome_space and intervention_space of a system</span>
 </span><span id="BaseSpace-10"><a href="#BaseSpace-10"><span class="linenos"> 10</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="BaseSpace-11"><a href="#BaseSpace-11"><span class="linenos"> 11</span></a>
 </span><span id="BaseSpace-12"><a href="#BaseSpace-12"><span class="linenos"> 12</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ConfigParameterBinding</span><span class="p">,</span><span class="n">Any</span><span class="p">]]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span><span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span><span class="n">BaseMutator</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseSpace-13"><a href="#BaseSpace-13"><span class="linenos"> 13</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-13"><a href="#BaseSpace-13"><span class="linenos"> 13</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-14"><a href="#BaseSpace-14"><span class="linenos"> 14</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="BaseSpace-15"><a href="#BaseSpace-15"><span class="linenos"> 15</span></a>
 </span><span id="BaseSpace-16"><a href="#BaseSpace-16"><span class="linenos"> 16</span></a><span class="sd">            Args:</span>
@@ -233,7 +233,7 @@
 </span><span id="BaseSpace-23"><a href="#BaseSpace-23"><span class="linenos"> 23</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">mutator</span> <span class="o">=</span> <span class="n">mutator</span>
 </span><span id="BaseSpace-24"><a href="#BaseSpace-24"><span class="linenos"> 24</span></a>
 </span><span id="BaseSpace-25"><a href="#BaseSpace-25"><span class="linenos"> 25</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="n">BaseAutoDiscModule</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseSpace-26"><a href="#BaseSpace-26"><span class="linenos"> 26</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-26"><a href="#BaseSpace-26"><span class="linenos"> 26</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-27"><a href="#BaseSpace-27"><span class="linenos"> 27</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="BaseSpace-28"><a href="#BaseSpace-28"><span class="linenos"> 28</span></a>
 </span><span id="BaseSpace-29"><a href="#BaseSpace-29"><span class="linenos"> 29</span></a><span class="sd">            Args:</span>
@@ -248,7 +248,7 @@
 </span><span id="BaseSpace-38"><a href="#BaseSpace-38"><span class="linenos"> 38</span></a>                <span class="bp">self</span><span class="o">.</span><span class="n">mutator</span><span class="o">.</span><span class="n">init_shape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="BaseSpace-39"><a href="#BaseSpace-39"><span class="linenos"> 39</span></a>
 </span><span id="BaseSpace-40"><a href="#BaseSpace-40"><span class="linenos"> 40</span></a>    <span class="k">def</span> <span class="nf">apply_binding_if_existing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="n">ConfigParameterBinding</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">lookup_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-</span><span id="BaseSpace-41"><a href="#BaseSpace-41"><span class="linenos"> 41</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-41"><a href="#BaseSpace-41"><span class="linenos"> 41</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-42"><a href="#BaseSpace-42"><span class="linenos"> 42</span></a><span class="sd">            Get result of config parameter binding operation</span>
 </span><span id="BaseSpace-43"><a href="#BaseSpace-43"><span class="linenos"> 43</span></a>
 </span><span id="BaseSpace-44"><a href="#BaseSpace-44"><span class="linenos"> 44</span></a><span class="sd">            Args:</span>
@@ -265,13 +265,13 @@
 </span><span id="BaseSpace-55"><a href="#BaseSpace-55"><span class="linenos"> 55</span></a>        <span class="k">return</span> <span class="n">value</span>
 </span><span id="BaseSpace-56"><a href="#BaseSpace-56"><span class="linenos"> 56</span></a>
 </span><span id="BaseSpace-57"><a href="#BaseSpace-57"><span class="linenos"> 57</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseSpace-58"><a href="#BaseSpace-58"><span class="linenos"> 58</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-58"><a href="#BaseSpace-58"><span class="linenos"> 58</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-59"><a href="#BaseSpace-59"><span class="linenos"> 59</span></a><span class="sd">        Randomly sample an element of this space.</span>
 </span><span id="BaseSpace-60"><a href="#BaseSpace-60"><span class="linenos"> 60</span></a><span class="sd">        Can be uniform or non-uniform sampling based on boundedness of space.&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-61"><a href="#BaseSpace-61"><span class="linenos"> 61</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseSpace-62"><a href="#BaseSpace-62"><span class="linenos"> 62</span></a>
 </span><span id="BaseSpace-63"><a href="#BaseSpace-63"><span class="linenos"> 63</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="BaseSpace-64"><a href="#BaseSpace-64"><span class="linenos"> 64</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-64"><a href="#BaseSpace-64"><span class="linenos"> 64</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-65"><a href="#BaseSpace-65"><span class="linenos"> 65</span></a><span class="sd">        Randomly mutate an element of this space.</span>
 </span><span id="BaseSpace-66"><a href="#BaseSpace-66"><span class="linenos"> 66</span></a>
 </span><span id="BaseSpace-67"><a href="#BaseSpace-67"><span class="linenos"> 67</span></a><span class="sd">        Args:</span>
@@ -280,7 +280,7 @@
 </span><span id="BaseSpace-70"><a href="#BaseSpace-70"><span class="linenos"> 70</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseSpace-71"><a href="#BaseSpace-71"><span class="linenos"> 71</span></a>
 </span><span id="BaseSpace-72"><a href="#BaseSpace-72"><span class="linenos"> 72</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="BaseSpace-73"><a href="#BaseSpace-73"><span class="linenos"> 73</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-73"><a href="#BaseSpace-73"><span class="linenos"> 73</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-74"><a href="#BaseSpace-74"><span class="linenos"> 74</span></a><span class="sd">        Return boolean specifying if x is a valid</span>
 </span><span id="BaseSpace-75"><a href="#BaseSpace-75"><span class="linenos"> 75</span></a><span class="sd">        member of this space</span>
 </span><span id="BaseSpace-76"><a href="#BaseSpace-76"><span class="linenos"> 76</span></a>
@@ -290,7 +290,7 @@
 </span><span id="BaseSpace-80"><a href="#BaseSpace-80"><span class="linenos"> 80</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseSpace-81"><a href="#BaseSpace-81"><span class="linenos"> 81</span></a>
 </span><span id="BaseSpace-82"><a href="#BaseSpace-82"><span class="linenos"> 82</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="BaseSpace-83"><a href="#BaseSpace-83"><span class="linenos"> 83</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-83"><a href="#BaseSpace-83"><span class="linenos"> 83</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-84"><a href="#BaseSpace-84"><span class="linenos"> 84</span></a><span class="sd">        Return a valid clamped value of x inside space&#39;s bounds</span>
 </span><span id="BaseSpace-85"><a href="#BaseSpace-85"><span class="linenos"> 85</span></a>
 </span><span id="BaseSpace-86"><a href="#BaseSpace-86"><span class="linenos"> 86</span></a><span class="sd">        Args:</span>
@@ -299,7 +299,7 @@
 </span><span id="BaseSpace-89"><a href="#BaseSpace-89"><span class="linenos"> 89</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 </span><span id="BaseSpace-90"><a href="#BaseSpace-90"><span class="linenos"> 90</span></a>
 </span><span id="BaseSpace-91"><a href="#BaseSpace-91"><span class="linenos"> 91</span></a>    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span><span id="BaseSpace-92"><a href="#BaseSpace-92"><span class="linenos"> 92</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-92"><a href="#BaseSpace-92"><span class="linenos"> 92</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-93"><a href="#BaseSpace-93"><span class="linenos"> 93</span></a><span class="sd">        Return boolean specifying if x is a valid</span>
 </span><span id="BaseSpace-94"><a href="#BaseSpace-94"><span class="linenos"> 94</span></a><span class="sd">        member of this space</span>
 </span><span id="BaseSpace-95"><a href="#BaseSpace-95"><span class="linenos"> 95</span></a>
@@ -309,7 +309,7 @@
 </span><span id="BaseSpace-99"><a href="#BaseSpace-99"><span class="linenos"> 99</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </span><span id="BaseSpace-100"><a href="#BaseSpace-100"><span class="linenos">100</span></a>
 </span><span id="BaseSpace-101"><a href="#BaseSpace-101"><span class="linenos">101</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="BaseSpace-102"><a href="#BaseSpace-102"><span class="linenos">102</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace-102"><a href="#BaseSpace-102"><span class="linenos">102</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace-103"><a href="#BaseSpace-103"><span class="linenos">103</span></a><span class="sd">            Convert the space into JSON</span>
 </span><span id="BaseSpace-104"><a href="#BaseSpace-104"><span class="linenos">104</span></a>
 </span><span id="BaseSpace-105"><a href="#BaseSpace-105"><span class="linenos">105</span></a><span class="sd">            Returns:</span>
@@ -345,7 +345,7 @@
     </div>
     <a class="headerlink" href="#BaseSpace.__init__"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace.__init__-12"><a href="#BaseSpace.__init__-12"><span class="linenos">12</span></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="p">:</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ConfigParameterBinding</span><span class="p">,</span><span class="n">Any</span><span class="p">]]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span><span class="n">torch</span><span class="o">.</span><span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mutator</span><span class="p">:</span><span class="n">BaseMutator</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseSpace.__init__-13"><a href="#BaseSpace.__init__-13"><span class="linenos">13</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace.__init__-13"><a href="#BaseSpace.__init__-13"><span class="linenos">13</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.__init__-14"><a href="#BaseSpace.__init__-14"><span class="linenos">14</span></a><span class="sd">            Init the elements useful to the spaces</span>
 </span><span id="BaseSpace.__init__-15"><a href="#BaseSpace.__init__-15"><span class="linenos">15</span></a>
 </span><span id="BaseSpace.__init__-16"><a href="#BaseSpace.__init__-16"><span class="linenos">16</span></a><span class="sd">            Args:</span>
@@ -381,7 +381,7 @@
     </div>
     <a class="headerlink" href="#BaseSpace.initialize"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace.initialize-25"><a href="#BaseSpace.initialize-25"><span class="linenos">25</span></a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_obj</span><span class="p">:</span> <span class="n">BaseAutoDiscModule</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="BaseSpace.initialize-26"><a href="#BaseSpace.initialize-26"><span class="linenos">26</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace.initialize-26"><a href="#BaseSpace.initialize-26"><span class="linenos">26</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.initialize-27"><a href="#BaseSpace.initialize-27"><span class="linenos">27</span></a><span class="sd">            Initialize the space.</span>
 </span><span id="BaseSpace.initialize-28"><a href="#BaseSpace.initialize-28"><span class="linenos">28</span></a>
 </span><span id="BaseSpace.initialize-29"><a href="#BaseSpace.initialize-29"><span class="linenos">29</span></a><span class="sd">            Args:</span>
@@ -417,7 +417,7 @@
     </div>
     <a class="headerlink" href="#BaseSpace.apply_binding_if_existing"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace.apply_binding_if_existing-40"><a href="#BaseSpace.apply_binding_if_existing-40"><span class="linenos">40</span></a>    <span class="k">def</span> <span class="nf">apply_binding_if_existing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">:</span><span class="n">Union</span><span class="p">[</span><span class="n">ConfigParameterBinding</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">lookup_obj</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-</span><span id="BaseSpace.apply_binding_if_existing-41"><a href="#BaseSpace.apply_binding_if_existing-41"><span class="linenos">41</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace.apply_binding_if_existing-41"><a href="#BaseSpace.apply_binding_if_existing-41"><span class="linenos">41</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.apply_binding_if_existing-42"><a href="#BaseSpace.apply_binding_if_existing-42"><span class="linenos">42</span></a><span class="sd">            Get result of config parameter binding operation</span>
 </span><span id="BaseSpace.apply_binding_if_existing-43"><a href="#BaseSpace.apply_binding_if_existing-43"><span class="linenos">43</span></a>
 </span><span id="BaseSpace.apply_binding_if_existing-44"><a href="#BaseSpace.apply_binding_if_existing-44"><span class="linenos">44</span></a><span class="sd">            Args:</span>
@@ -458,7 +458,7 @@ Returns:
     </div>
     <a class="headerlink" href="#BaseSpace.sample"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace.sample-57"><a href="#BaseSpace.sample-57"><span class="linenos">57</span></a>    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="BaseSpace.sample-58"><a href="#BaseSpace.sample-58"><span class="linenos">58</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace.sample-58"><a href="#BaseSpace.sample-58"><span class="linenos">58</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.sample-59"><a href="#BaseSpace.sample-59"><span class="linenos">59</span></a><span class="sd">        Randomly sample an element of this space.</span>
 </span><span id="BaseSpace.sample-60"><a href="#BaseSpace.sample-60"><span class="linenos">60</span></a><span class="sd">        Can be uniform or non-uniform sampling based on boundedness of space.&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.sample-61"><a href="#BaseSpace.sample-61"><span class="linenos">61</span></a>        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
@@ -483,7 +483,7 @@ Can be uniform or non-uniform sampling based on boundedness of space.</p>
     </div>
     <a class="headerlink" href="#BaseSpace.mutate"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace.mutate-63"><a href="#BaseSpace.mutate-63"><span class="linenos">63</span></a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="BaseSpace.mutate-64"><a href="#BaseSpace.mutate-64"><span class="linenos">64</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace.mutate-64"><a href="#BaseSpace.mutate-64"><span class="linenos">64</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.mutate-65"><a href="#BaseSpace.mutate-65"><span class="linenos">65</span></a><span class="sd">        Randomly mutate an element of this space.</span>
 </span><span id="BaseSpace.mutate-66"><a href="#BaseSpace.mutate-66"><span class="linenos">66</span></a>
 </span><span id="BaseSpace.mutate-67"><a href="#BaseSpace.mutate-67"><span class="linenos">67</span></a><span class="sd">        Args:</span>
@@ -513,7 +513,7 @@ Can be uniform or non-uniform sampling based on boundedness of space.</p>
     </div>
     <a class="headerlink" href="#BaseSpace.contains"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace.contains-72"><a href="#BaseSpace.contains-72"><span class="linenos">72</span></a>    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="BaseSpace.contains-73"><a href="#BaseSpace.contains-73"><span class="linenos">73</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace.contains-73"><a href="#BaseSpace.contains-73"><span class="linenos">73</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.contains-74"><a href="#BaseSpace.contains-74"><span class="linenos">74</span></a><span class="sd">        Return boolean specifying if x is a valid</span>
 </span><span id="BaseSpace.contains-75"><a href="#BaseSpace.contains-75"><span class="linenos">75</span></a><span class="sd">        member of this space</span>
 </span><span id="BaseSpace.contains-76"><a href="#BaseSpace.contains-76"><span class="linenos">76</span></a>
@@ -545,7 +545,7 @@ member of this space</p>
     </div>
     <a class="headerlink" href="#BaseSpace.clamp"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace.clamp-82"><a href="#BaseSpace.clamp-82"><span class="linenos">82</span></a>    <span class="k">def</span> <span class="nf">clamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-</span><span id="BaseSpace.clamp-83"><a href="#BaseSpace.clamp-83"><span class="linenos">83</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace.clamp-83"><a href="#BaseSpace.clamp-83"><span class="linenos">83</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.clamp-84"><a href="#BaseSpace.clamp-84"><span class="linenos">84</span></a><span class="sd">        Return a valid clamped value of x inside space&#39;s bounds</span>
 </span><span id="BaseSpace.clamp-85"><a href="#BaseSpace.clamp-85"><span class="linenos">85</span></a>
 </span><span id="BaseSpace.clamp-86"><a href="#BaseSpace.clamp-86"><span class="linenos">86</span></a><span class="sd">        Args:</span>
@@ -575,7 +575,7 @@ member of this space</p>
     </div>
     <a class="headerlink" href="#BaseSpace.to_json"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="BaseSpace.to_json-101"><a href="#BaseSpace.to_json-101"><span class="linenos">101</span></a>    <span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-</span><span id="BaseSpace.to_json-102"><a href="#BaseSpace.to_json-102"><span class="linenos">102</span></a>        <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="BaseSpace.to_json-102"><a href="#BaseSpace.to_json-102"><span class="linenos">102</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="BaseSpace.to_json-103"><a href="#BaseSpace.to_json-103"><span class="linenos">103</span></a><span class="sd">            Convert the space into JSON</span>
 </span><span id="BaseSpace.to_json-104"><a href="#BaseSpace.to_json-104"><span class="linenos">104</span></a>
 </span><span id="BaseSpace.to_json-105"><a href="#BaseSpace.to_json-105"><span class="linenos">105</span></a><span class="sd">            Returns:</span>
