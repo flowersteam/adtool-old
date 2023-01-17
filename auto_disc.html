@@ -23,10 +23,10 @@
 
         <h2>Contents</h2>
         <ul>
-  <li><a href="#automateddiscoverytool">AutomatedDiscoveryTool</a>
+  <li><a href="#automated-discovery-tool">Automated Discovery Tool</a>
   <ul>
     <li><a href="#installation">Installation</a></li>
-    <li><a href="#using-automateddiscoverytool">Using AutomatedDiscoveryTool</a></li>
+    <li><a href="#using-automated-discovery-tool">Using Automated Discovery Tool</a></li>
     <li><a href="#contributing">Contributing</a></li>
   </ul></li>
   <li><a href="#user-documentation">User documentation</a>
@@ -68,9 +68,9 @@
                     <h1 class="modulename">
 auto_disc    </h1>
 
-                        <div class="docstring"><h1 id="automateddiscoverytool">AutomatedDiscoveryTool</h1>
+                        <div class="docstring"><h1 id="automated-discovery-tool">Automated Discovery Tool</h1>
 
-<p>We're pleased to introduce AutomatedDiscoveryTool, a software for assisted automated discovery and exploration of complex systems.</p>
+<p>We're pleased to introduce Automated Discovery Tool, a software for assisted automated discovery and exploration of complex systems.</p>
 
 <h2 id="installation">Installation</h2>
 
@@ -84,14 +84,22 @@ To install docker:</p>
 <li>Install Docker-compose: <a href="https://docs.docker.com/compose/install/"><code>LINK</code></a></li>
 </ol>
 
-<h2 id="using-automateddiscoverytool">Using AutomatedDiscoveryTool</h2>
+<h2 id="using-automated-discovery-tool">Using Automated Discovery Tool</h2>
 
-<p>Our software is broken down into two parts:</p>
+<p>Our software consists of two primary parts:</p>
 
 <ul>
-<li>a Python Lib <a href="libs/auto_disc">auto_disc</a> where you can use/download/implement systems to explore as well as exploration algorithms.</li>
-<li>a web application allowing you to perform assisted automated discovery experiments using a user-friendly interface.</li>
+<li>a Python library called <a href="libs/auto_disc"><code>auto_disc</code></a> where you can 
+use/download/implement systems to explore as well as exploration algorithms.</li>
+<li>a web application allowing you to perform assisted automated discovery 
+experiments using a user-friendly interface.</li>
 </ul>
+
+<p>The <code><a href="">auto_disc</a></code> library can be used independently of the rest of
+Automated Discovery Tool, for example to implement some bespoke remote computing
+solutions, but its main purpose is to present a standardized interface for 
+managing experimental data and configurational metadata which is
+modified and displayed by the GUI.</p>
 
 <h3 id="launching-the-software">Launching the software</h3>
 
@@ -126,7 +134,20 @@ Here is a tutorial on how to add a new module to the lib (and then be able to us
 
 <h3 id="installation-2">Installation</h3>
 
-<h4 id="autodisc-lib">AutoDisc Lib</h4>
+<p>The software is implemented in various microservices</p>
+
+<ul>
+<li><code><a href="">auto_disc</a></code> library : a pure Python API for implementing custom experiments \
+and search algorithms to use in the software</li>
+<li>AutoDiscServer : simple service which performs the operations specified by
+functionality in <code><a href="">auto_disc</a></code> library.</li>
+<li>FrontEndApp : web GUI implemented in Angular for interacting with the software</li>
+<li>AppDB &amp; ExpeDB : databases which manage the metadata of experiments (linked
+with the FrontEnd) and resulting experimental data, respectively</li>
+<li>JupyterLab : Jupyter instance allowing interaction with experimental data</li>
+</ul>
+
+<h4 id="auto_disc-library"><code><a href="">auto_disc</a></code> library</h4>
 
 <ol>
 <li>If you do not already have it, please install <a href="https://www.anaconda.com/">Conda</a></li>
@@ -138,23 +159,23 @@ Here is a tutorial on how to add a new module to the lib (and then be able to us
 <h4 id="autodiscserver">AutoDiscServer</h4></li>
 <li><p>Install flask: <code>pip install -r services/AutoDiscServer/flask_app/requirements.txt</code></p>
 
-<h3 id="app-db-expe-db">App DB &amp; Expe DB</h3></li>
+<h3 id="frontendapp">FrontEndApp</h3></li>
+<li><p>Install Angular: <a href="https://angular.io/guide/setup-local"><code>LINK</code></a></p></li>
+<li>Enter the front-end app folder: <code>cd services/FrontEndApp/angular_app/</code>.</li>
+<li><p>Install required packages: <code>npm install</code></p>
+
+<h3 id="appdb-expedb">AppDB &amp; ExpeDB</h3></li>
 <li><p>Install Docker: <a href="https://docs.docker.com/engine/install/"><code>LINK</code></a></p></li>
 <li>Install Docker-compose: <a href="https://docs.docker.com/compose/install/"><code>LINK</code></a></li>
 <li>Go to the service folder: <code>cd services</code>.</li>
 <li>Generate containers <code>sudo docker-compose -f services/docker-compose.yml create</code></li>
 <li><p>Install the Expe DB REST API requirements: <code>pip install -r ExpeDB/API/flask_app/requirements.txt</code></p>
 
-<h3 id="front-end-app">Front-end app</h3></li>
-<li><p>Install Angular: <a href="https://angular.io/guide/setup-local"><code>LINK</code></a></p></li>
-<li>Enter the front-end app folder: <code>cd services/FrontEndApp/angular_app/</code>.</li>
-<li><p>Install required packages: <code>npm install</code></p>
-
-<h4 id="jupyter-lab">Jupyter Lab</h4></li>
+<h4 id="jupyterlab">JupyterLab</h4></li>
 <li><p>Install jupyter: <code>pip install -r JupyterLab/requirements.txt</code></p></li>
 </ol>
 
-<h3 id="testing-the-auto_disc-lib-alone">Testing the auto_disc lib alone</h3>
+<h3 id="testing-the-auto_disc-library-alone">Testing the auto_disc library alone</h3>
 
 <ol>
 <li>Edit the <code>libs/tests/AutoDiscExperiment.py</code> file to configure the experiment</li>
@@ -190,12 +211,12 @@ Add <code>-d</code> option for daemon.</p>
 Add <code>-d</code> option for daemon.
 Launch flask server for the REST API: <code>python ExpeDB/app.py</code></p>
 
-<h5 id="front-end-app-2">Front-end app</h5>
+<h5 id="front-end-app">Front-end app</h5>
 
 <p>Enter the front-end app folder: <code>cd FrontEndApp</code>.
 Start the angular app: <code>ng serve</code>. </p>
 
-<h5 id="jupyter-lab-2">Jupyter Lab</h5>
+<h5 id="jupyter-lab">Jupyter Lab</h5>
 
 <p>Enter Jupyter Lab's folder: <code>cd ../JupyterLab</code>
 Give the appropriate rights to the notebook folder: <code>chmod 777 -R Notebooks/</code>
@@ -313,7 +334,7 @@ The yellow/blue popover informs weither the jupyter kernel is available and conn
 
 <h1 id="add-a-new-module-to-the-libs">Add a new module to the libs</h1>
 
-<p>Four different types of modules can be implemented in the AutomatedDiscoveryTool libs</p>
+<p>Four different types of modules can be implemented in the Automated Discovery Tool libs</p>
 
 <ul>
 <li>Systems</li>
@@ -406,7 +427,7 @@ libs/auto_disc/auto_disc/systems/python_systems/__init__.py
 <h1 id="add-a-new-callback-to-the-libs">Add a new callback to the libs</h1></li>
 </ol>
 
-<p>Six different types of callbacks can be implemented in the <code>AutomatedDiscoveryTool</code> libs, namely:</p>
+<p>Six different types of callbacks can be implemented in the <code>Automated Discovery Tool</code> libs, namely:</p>
 
 <ul>
 <li>on_cancelled_callbacks : called when user decides to cancel the experiment in the frontend</li>
